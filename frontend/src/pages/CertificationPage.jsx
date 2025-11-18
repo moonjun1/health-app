@@ -10,72 +10,19 @@ const CertificationPage = () => {
       {/* Section 1: Hero */}
       <section className="cert-hero">
         <h1 className="cert-title">특허 인증</h1>
-
-        <div className="cert-hero-circle">
-          <div className="patent-logo">
-            <div className="patent-logo-text">특허청</div>
-            <div className="patent-logo-subtitle">KOREAN INTELLECTUAL PROPERTY OFFICE</div>
-          </div>
-          <h2 className="cert-hero-quote">"신뢰는 기술로부터, 기술은 사람으로부터."</h2>
-          <p className="cert-hero-text">
-            AI와 전문가가 함께 만드는 신뢰 기반의 코칭 시스템.<br />
-            특허받은 기술과 공식 인증 절차로,<br />
-            모든 사용자에게 안정적인 서비스를 제공합니다
-          </p>
-        </div>
+        <img src="/patent-logo.png" alt="특허청" className="patent-logo-img" />
       </section>
 
-      {/* Section 2: Patents */}
-      <section className="cert-patents">
-        <h2 className="patents-title">AI 맞춤 코칭 시스템 특허 보유</h2>
-        <p className="patents-quote">
-          "운동 데이터를 단순히 수집하는 것을 넘어,<br />
-          개인별 피드백으로 발전시키는 기술입니다."
+      {/* Section 2: Description */}
+      <section className="cert-description">
+        <p className="desc-text">
+          AI와 전문가가 함께 만드는 신뢰 기반의 코칭 시스템. 특허받은 기술과 공식 인증 절차로, 모든 사용자에게 안정적인 서비스를 제공합니다
         </p>
-        <div className="patents-grid">
-          <div className="patent-box">
-            AI 기반 맞춤<br />
-            운동 추천 시스템<br />
-            (특허 제10-XXXXXXX호)
-          </div>
-          <div className="patent-box">
-            운동 데이터 분석을 통한<br />
-            피드백 알고리즘<br />
-            (출원 중)
-          </div>
-          <div className="patent-box">
-            헬스케어 코칭<br />
-            매칭 플랫폼<br />
-            (등록 완료)
-          </div>
-        </div>
       </section>
 
-      {/* Section 3: Verification Process */}
-      <section className="cert-verification">
-        <p className="verification-title">모든 코치는 검증된 전문가입니다.</p>
-        
-        <div className="verification-flow">
-          <div className="flow-step">
-            <div className="flow-dot"></div>
-            <p>코치 등록 및<br />자격증 제출</p>
-          </div>
-          <div className="flow-line"></div>
-          <div className="flow-step">
-            <div className="flow-dot"></div>
-            <p>AI 프로필<br />데이터 검수</p>
-          </div>
-          <div className="flow-line"></div>
-          <div className="flow-step">
-            <div className="flow-dot"></div>
-            <p>관리자 검증 및<br />내부 심사</p>
-          </div>
-          <div className="flow-line"></div>
-          <div className="flow-step">
-            <div className="flow-dot"></div>
-            <p>공식 인증<br />뱃지 발급</p>
-          </div>
-        </div>
+      {/* Section 3: Trainers */}
+      <section className="cert-trainers">
+        <h2 className="trainers-title">모든 코치는 검증된 전문가입니다.</h2>
 
         <div className="trainers-grid">
           <div className="trainer-card">
@@ -94,13 +41,6 @@ const CertificationPage = () => {
             <p>조우민 트레이너</p>
           </div>
         </div>
-
-        <p className="verification-desc">
-          등록된 코치는 자격증, 경력, 활동 이력 등을<br />
-          플랫폼 내부 심사 절차를 통해 공식 인증받습니다.<br />
-          AI와 사람이 함께 검증하는 이중 구조로,<br />
-          사용자에게 더욱 믿을 수 있는 코칭 환경을 제공합니다.
-        </p>
       </section>
 
       {/* Section 4: Certification Process */}

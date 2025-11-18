@@ -8,11 +8,12 @@
 /* Hero Section */
 .cert-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 120px 60px;
+  padding: 120px 60px 60px;
   overflow: hidden;
 }
 
@@ -68,103 +69,33 @@
 }
 
 .cert-title {
-  position: absolute;
-  top: 180px;
-  left: 50%;
-  transform: translateX(-50%);
   color: var(--color-text-white);
   font-size: 70px;
   font-weight: 700;
-  z-index: 3;
   text-align: center;
-}
-
-.cert-dot {
-  position: absolute;
-  top: 300px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  background: white;
-  border-radius: 50%;
-  z-index: 3;
-}
-
-.cert-hero-circle {
-  position: relative;
-  background: white;
-  border-radius: 50%;
-  width: 1000px;
-  height: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 120px;
-  z-index: 2;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-}
-
-.patent-logo {
   margin-bottom: 40px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
-.patent-logo-text {
-  font-size: 60px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 10px;
+.patent-logo-img {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
 }
 
-.patent-logo-subtitle {
-  font-size: 16px;
-  font-weight: 600;
+/* Description Section */
+.cert-description {
+  padding: 80px 60px;
+  background: linear-gradient(180deg, rgba(118, 157, 189, 0.8) 0%, rgba(118, 157, 189, 0.95) 100%);
+}
+
+.desc-text {
   color: #546471;
-  letter-spacing: 1px;
-}
-
-.cert-hero-quote {
-  font-size: 40px;
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 2;
-}
-
-.cert-hero-text {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 500;
-  color: #000;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
   line-height: 1.8;
-  position: relative;
-  z-index: 2;
-}
-
-.cert-hero-small-circle {
-  position: absolute;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(180deg, #ffffff 35%, rgba(153, 153, 153, 0.2) 100%);
-  border-radius: 50%;
-  width: 450px;
-  height: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: 500;
-  color: #000;
-  text-align: center;
-  line-height: 2;
-  z-index: 2;
 }
 
 /* Patents Section */
@@ -217,17 +148,17 @@
   justify-content: center;
 }
 
-/* Verification Section */
-.cert-verification {
+/* Trainers Section */
+.cert-trainers {
   position: relative;
-  min-height: 120vh;
+  min-height: 80vh;
   padding: 100px 60px;
   background: linear-gradient(180deg, rgba(118, 157, 189, 0.6) 0%, #769dbd 100%);
 }
 
-.verification-title {
+.trainers-title {
   color: var(--color-text-white);
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.1em;
