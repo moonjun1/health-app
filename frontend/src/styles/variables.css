@@ -1,0 +1,47 @@
+/* 디자인 시스템 - 색상, 폰트, 간격 변수 */
+
+:root {
+  /* 색상 - Figma 디자인 기준 */
+  --color-primary: #769DBD;
+  --color-primary-dark: #5A7FA0;
+  --color-secondary: #546471;
+  --color-text-white: #ffffff;
+  --color-text-dark: #333333;
+  --color-overlay: rgba(118, 157, 189, 0.6);
+  --color-header-bg: rgba(118, 157, 189, 0.6);
+
+  /* 폰트 */
+  --font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
+                 "Apple SD Gothic Neo", sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-size-2xl: 48px;
+  --font-size-3xl: 64px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* 간격 */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+
+  /* 레이아웃 */
+  --header-height: 60px;
+  --container-max-width: 1920px;
+
+  /* 효과 */
+  --transition-default: all 0.3s ease;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}

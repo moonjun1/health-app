@@ -1,0 +1,126 @@
+.map-page {
+  min-height: 100vh;
+  background: #769DBD;
+}
+
+.map-header {
+  width: 100%;
+  height: 80px;
+  background: rgba(90, 127, 160, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.map-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.map-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.map-nav a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.map-container {
+  padding-top: 80px;
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.map-sidebar {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.map-sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.gym-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gym-item {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gym-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gym-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.gym-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.map-view {
+  flex: 1;
+  background: #e0e0e0;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.map-placeholder p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.map-note {
+  font-size: 14px !important;
+  color: #999 !important;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    flex-direction: column;
+  }
+
+  .map-sidebar {
+    width: 100%;
+    height: 40%;
+  }
+
+  .map-view {
+    height: 60%;
+  }
+}
