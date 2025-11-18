@@ -9,16 +9,7 @@ const CertificationPage = () => {
       
       {/* Section 1: Hero */}
       <section className="cert-hero">
-        {/* Background particles */}
-        <div className="particle particle-1"></div>
-        <div className="particle particle-2"></div>
-        <div className="particle particle-3"></div>
-        <div className="particle particle-4"></div>
-        <div className="particle particle-5"></div>
-        <div className="particle particle-6"></div>
-
         <h1 className="cert-title">특허 인증</h1>
-        <div className="cert-dot"></div>
 
         <div className="cert-hero-circle">
           <div className="patent-logo">
@@ -31,12 +22,6 @@ const CertificationPage = () => {
             특허받은 기술과 공식 인증 절차로,<br />
             모든 사용자에게 안정적인 서비스를 제공합니다
           </p>
-          <img src="/athlete-top.png" alt="운동선수" className="athlete-image" />
-        </div>
-
-        <div className="cert-hero-small-circle">
-          기술과 사람<br />
-          두 가지 신뢰가 만나는 지점
         </div>
       </section>
 
