@@ -26,19 +26,13 @@ const CertificationPage = () => {
 
         <div className="trainers-grid">
           <div className="trainer-card">
-            <img src="/trainer1.png" alt="김성준 트레이너" />
-            <div className="trainer-badge">✓</div>
-            <p>김성준 트레이너</p>
+            <img src="/trainer1.png" alt="트레이너 1" />
           </div>
           <div className="trainer-card">
-            <img src="/trainer2.png" alt="박지수 트레이너" />
-            <div className="trainer-badge">✓</div>
-            <p>박지수 트레이너</p>
+            <img src="/trainer2.png" alt="트레이너 2" />
           </div>
           <div className="trainer-card">
-            <img src="/trainer3.png" alt="조우민 트레이너" />
-            <div className="trainer-badge">✓</div>
-            <p>조우민 트레이너</p>
+            <img src="/trainer3.png" alt="트레이너 3" />
           </div>
         </div>
       </section>
