@@ -14,7 +14,7 @@ const Header = () => {
           <a href="#intro" className="nav-link">소개</a>
           <a href="#integration" className="nav-link">통합·인증</a>
           <a href="#map" className="nav-link">지도</a>
-          <a href="#recruit" className="nav-link">인재 모집</a>
+          <a href="/recruit" className="nav-link">인재 모집</a>
           <a href="#community" className="nav-link">커뮤니티</a>
           <a href="#ai" className="nav-link">AI추천</a>
         </nav>
