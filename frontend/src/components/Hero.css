@@ -139,6 +139,31 @@
   z-index: 1;
 }
 
+.hero-rings-image {
+  position: absolute;
+  right: 80px;
+  bottom: 60px;
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  max-height: 500px;
+  object-fit: contain;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInRings 1s ease-in-out forwards;
+}
+
+@keyframes fadeInRings {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* 반응형 */
 @media (max-width: 1200px) {
   .hero-title {

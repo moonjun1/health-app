@@ -9,12 +9,14 @@ const Hero = () => {
       background: '/runners.png',
       subtitle: '운동이 이어주는',
       title: '두 번째 인연',
+      showRings: false,
     },
     {
-      background: '/rings.png',
+      background: null,
       subtitle: '데이터로 연결되는',
       title: '새로운 코칭 경험',
       description: '복잡한 검색은 이제 그만. 데이터가 당신에게 맞는 코치를 직접 연결합니다.',
+      showRings: true,
     },
   ];
 
@@ -28,13 +30,23 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div
-        className="hero-background"
-        style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
-      ></div>
+      {slides[currentSlide].background && (
+        <div
+          className="hero-background"
+          style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
+        ></div>
+      )}
       <div className="hero-corner-circle"></div>
       <div className="hero-diagonal-stripe"></div>
       <div className="hero-overlay"></div>
+
+      {slides[currentSlide].showRings && (
+        <img
+          src="/rings.png"
+          alt="체조 고리"
+          className="hero-rings-image"
+        />
+      )}
 
       <div className={`hero-content ${currentSlide === 1 ? 'slide-down' : ''}`}>
         <div className="hero-logo">logo</div>
