@@ -33,12 +33,12 @@
     rgba(118, 157, 189, 0.55) 70%,
     rgba(118, 157, 189, 0.35) 100%
   );
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 120px 60px 60px;
   max-width: 1920px;
   width: 100%;
@@ -99,32 +99,30 @@
 }
 
 /* 장식 요소 */
-.hero::after {
-  content: '';
+.hero-corner-circle {
   position: absolute;
-  right: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 200px;
-  height: 200px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  right: -250px;
+  top: -250px;
+  width: 700px;
+  height: 700px;
+  background: rgba(107, 145, 176, 0.35);
   border-radius: 50%;
   z-index: 1;
 }
 
-.hero::before {
-  content: '';
+.hero-diagonal-stripe {
   position: absolute;
-  right: 15%;
-  top: 20%;
-  width: 2px;
-  height: 300px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
+  right: -200px;
+  bottom: -300px;
+  width: 1000px;
+  height: 1000px;
+  background: linear-gradient(135deg,
+    transparent 0%,
+    rgba(91, 155, 213, 0.25) 35%,
+    rgba(91, 155, 213, 0.45) 100%
   );
+  transform: rotate(-35deg);
+  transform-origin: bottom right;
   z-index: 1;
 }
 
