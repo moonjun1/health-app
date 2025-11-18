@@ -142,7 +142,7 @@
 .hero-rings-image {
   position: absolute;
   right: 80px;
-  bottom: 60px;
+  top: 120px;
   width: auto;
   height: auto;
   max-width: 400px;
