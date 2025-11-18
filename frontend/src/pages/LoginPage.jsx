@@ -1,108 +1,78 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 import './LoginPage.css';
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+    rememberMe: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Login attempt:', { email, password });
-    // Add login logic here
+    // 로그인 처리 (현재는 메인 페이지로 이동)
+    console.log('Login data:', formData);
+    navigate('/main');
   };
 
   return (
     <div className="login-page">
-      {/* Header */}
-      <header className="login-header">
-        <div className="login-logo">logo</div>
-        <nav className="login-nav">
-          <a href="/main">홈</a>
-          <a href="#certificate">자격증/소개</a>
-          <a href="#recruit">인재모집</a>
-          <a href="#community">커뮤니티</a>
-          <a href="#mypage">마이페이지</a>
-          <a href="#service">서비스 이용</a>
-          <a href="/login">LOGIN</a>
-        </nav>
-      </header>
-
-      {/* Login Form Container */}
+      <Header />
       <div className="login-container">
-        <div className="login-box">
-          <h1 className="login-title">로그인</h1>
-          <p className="login-subtitle">2RE PLAY에 오신 것을 환영합니다</p>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <h2 className="login-title">로그인</h2>
 
-          <form className="login-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                이메일
-              </label>
+          <div className="form-group">
+            <input
+              type="text"
+              name="username"
+              placeholder="아이디"
+              value={formData.username}
+              onChange={handleChange}
+              className="form-input"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="비밀번호"
+              value={formData.password}
+              onChange={handleChange}
+              className="form-input"
+              required
+            />
+          </div>
+
+          <div className="form-checkbox">
+            <label>
               <input
-                type="email"
-                id="email"
-                className="form-input"
-                placeholder="example@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+                type="checkbox"
+                name="rememberMe"
+                checked={formData.rememberMe}
+                onChange={handleChange}
               />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="password" className="form-label">
-                비밀번호
-              </label>
-              <input
-                type="password"
-                id="password"
-                className="form-input"
-                placeholder="비밀번호를 입력하세요"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-
-            <div className="form-options">
-              <label className="checkbox-label">
-                <input type="checkbox" className="checkbox-input" />
-                <span>로그인 상태 유지</span>
-              </label>
-              <a href="#forgot" className="forgot-link">
-                비밀번호 찾기
-              </a>
-            </div>
-
-            <button type="submit" className="login-button">
-              로그인
-            </button>
-          </form>
-
-          <div className="login-divider">
-            <span>또는</span>
+              <span>아이디 저장</span>
+            </label>
           </div>
 
-          <div className="social-login">
-            <button className="social-button google">
-              <span className="social-icon">G</span>
-              Google로 계속하기
-            </button>
-            <button className="social-button kakao">
-              <span className="social-icon">K</span>
-              카카오로 계속하기
-            </button>
-          </div>
-
-          <div className="signup-prompt">
-            <p>
-              계정이 없으신가요?{' '}
-              <a href="#signup" className="signup-link">
-                회원가입
-              </a>
-            </p>
-          </div>
-        </div>
+          <button type="submit" className="login-button">
+            로그인
+          </button>
+        </form>
       </div>
     </div>
   );
