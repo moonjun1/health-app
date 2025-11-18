@@ -41,38 +41,6 @@ const AIMatchingPage = () => {
         {/* Honeycomb Center */}
         <div className="ai-honeycomb-container">
           <img src="/honeycomb.png" alt="AI 분석" className="honeycomb-image" />
-          
-          {/* Four boxes around honeycomb */}
-          <div className="ai-box ai-box-topleft">
-            <span>나만의 코치 추천</span>
-          </div>
-          <div className="ai-box ai-box-topright">
-            <span>자세 분석</span>
-          </div>
-          <div className="ai-box ai-box-bottomleft">
-            <span>오늘의 운동 추천</span>
-          </div>
-          <div className="ai-box ai-box-bottomright">
-            <span>AI 운동 추천</span>
-          </div>
-
-          {/* Connecting lines */}
-          <svg className="ai-connections" viewBox="0 0 800 800">
-            <line x1="200" y1="200" x2="350" y2="350" stroke="white" strokeWidth="2"/>
-            <line x1="600" y1="200" x2="450" y2="350" stroke="white" strokeWidth="2"/>
-            <line x1="200" y1="600" x2="350" y2="450" stroke="white" strokeWidth="2"/>
-            <line x1="600" y1="600" x2="450" y2="450" stroke="white" strokeWidth="2"/>
-          </svg>
-
-          {/* Circles */}
-          <div className="ai-circle circle-1"></div>
-          <div className="ai-circle circle-2"></div>
-          <div className="ai-circle circle-3"></div>
-          <div className="ai-circle circle-4"></div>
-          <div className="ai-circle circle-5"></div>
-          <div className="ai-circle circle-6"></div>
-          <div className="ai-circle circle-7"></div>
-          <div className="ai-circle circle-8"></div>
         </div>
 
         {/* CTA Button */}
@@ -82,24 +50,34 @@ const AIMatchingPage = () => {
       {/* Footer */}
       <footer className="ai-footer">
         <div className="footer-content">
-          <div className="footer-links">
-            <a href="#coach">코치소개</a>
-            <a href="#find">코치찾기</a>
-            <a href="#register">코치등록하기</a>
+          <div className="footer-top">
+            <div className="footer-left">
+              <div className="footer-links">
+                <a href="#coach">코치소개</a>
+                <a href="#find">코치찾기</a>
+                <a href="#register">코치등록하기</a>
+              </div>
+              <div className="footer-contact">
+                <p className="footer-phone">1588-0000</p>
+                <p className="footer-hours">고객센터 평일 10:00~18:00 (주말/공휴일 휴무)</p>
+              </div>
+            </div>
+            <div className="footer-right">
+              <div className="footer-address">
+                <p>서울특별시 성동구 왕십리로 00길 00, 3층</p>
+                <p>(주)투리플레이</p>
+              </div>
+            </div>
           </div>
-          <div className="footer-contact">
-            <p className="footer-phone">1588-0000</p>
-            <p className="footer-hours">고객센터 평일 10:00~18:00 (주말/공휴일 휴무)</p>
-          </div>
-          <div className="footer-address">
-            <p>
-              서울특별시 성동구 왕십리로 00길 00, 3층
-              <br />
-              (주)투리플레이
-            </p>
-          </div>
-          <div className="footer-social">
-            <p>Instagram | 2play_health | www.2play.com</p>
+          <div className="footer-bottom">
+            <div className="footer-social-icons">
+              <div className="social-icon"></div>
+              <div className="social-icon"></div>
+              <div className="social-icon"></div>
+            </div>
+            <div className="footer-social">
+              <p>Instagram | 2play_health | www.2play.com</p>
+            </div>
           </div>
         </div>
       </footer>
