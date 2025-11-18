@@ -14,10 +14,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/runners.png');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
   z-index: 0;
 }
 
@@ -42,6 +42,11 @@
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
+  transition: transform 0.8s ease-in-out, padding 0.8s ease-in-out;
+}
+
+.hero-content.slide-down {
+  padding-top: 180px;
 }
 
 .hero-logo {
@@ -63,8 +68,17 @@
   font-size: 60px;
   font-weight: 700;
   color: var(--color-text-white);
-  margin-bottom: 60px;
+  margin-bottom: 24px;
   line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text-white);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.95;
 }
 
 .hero-button {

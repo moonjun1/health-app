@@ -1,18 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      background: '/runners.png',
+      subtitle: '운동이 이어주는',
+      title: '두 번째 인연',
+    },
+    {
+      background: '/rings.png',
+      subtitle: '데이터로 연결되는',
+      title: '새로운 코칭 경험',
+      description: '체계적인 관리로 전문가 매칭을 받고, 건강한 삶을 설계해보세요.',
+    },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 10000); // 10초
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
   return (
     <section className="hero">
-      <div className="hero-background"></div>
+      <div
+        className="hero-background"
+        style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
+      ></div>
       <div className="hero-corner-circle"></div>
       <div className="hero-diagonal-stripe"></div>
       <div className="hero-overlay"></div>
 
-      <div className="hero-content">
+      <div className={`hero-content ${currentSlide === 1 ? 'slide-down' : ''}`}>
         <div className="hero-logo">logo</div>
-        <h2 className="hero-subtitle">운동이 이어주는</h2>
-        <h1 className="hero-title">두 번째 인연</h1>
+        <h2 className="hero-subtitle">{slides[currentSlide].subtitle}</h2>
+        <h1 className="hero-title">{slides[currentSlide].title}</h1>
+        {slides[currentSlide].description && (
+          <p className="hero-description">{slides[currentSlide].description}</p>
+        )}
 
         <button className="hero-button">
           <span>찾으러 가기</span>
