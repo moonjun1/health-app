@@ -11,13 +11,15 @@ const Header = () => {
 
         <nav className="header-nav">
           <a href="/main" className="nav-link">홈</a>
-          <a href="#certificate" className="nav-link">자격증/소개</a>
-          <a href="#recruit" className="nav-link">인재모집</a>
+          <a href="#intro" className="nav-link">소개</a>
+          <a href="#integration" className="nav-link">통합·인증</a>
+          <a href="#map" className="nav-link">지도</a>
+          <a href="#recruit" className="nav-link">인재 모집</a>
           <a href="#community" className="nav-link">커뮤니티</a>
-          <a href="#mypage" className="nav-link">마이페이지</a>
-          <a href="#service" className="nav-link">서비스 이용</a>
-          <a href="/login" className="nav-link">LOGIN</a>
+          <a href="#ai" className="nav-link">AI추천</a>
         </nav>
+
+        <a href="/login" className="login-link">LOGIN</a>
       </div>
     </header>
   );
