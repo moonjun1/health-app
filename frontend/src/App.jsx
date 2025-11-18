@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoadingPage from './pages/LoadingPage';
 import MainPage from './pages/MainPage';
-import MainPageNew from './pages/MainPageNew';
 import Main2Page from './pages/Main2Page';
 import LoginPage from './pages/LoginPage';
 import SearchPage from './pages/SearchPage';
@@ -23,7 +22,6 @@ function App() {
         <Routes>
           <Route path="/" element={<LoadingPage />} />
           <Route path="/main" element={<MainPage />} />
-          <Route path="/main-new" element={<MainPageNew />} />
           <Route path="/main2" element={<Main2Page />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/search" element={<SearchPage />} />
