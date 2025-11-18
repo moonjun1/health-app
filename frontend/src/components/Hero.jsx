@@ -14,7 +14,7 @@ const Hero = () => {
       background: '/rings.png',
       subtitle: '데이터로 연결되는',
       title: '새로운 코칭 경험',
-      description: '체계적인 관리로 전문가 매칭을 받고, 건강한 삶을 설계해보세요.',
+      description: '복잡한 검색은 이제 그만. 데이터가 당신에게 맞는 코치를 직접 연결합니다.',
     },
   ];
 
