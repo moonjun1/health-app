@@ -16,7 +16,7 @@
   height: 100%;
   background-image: url('/runners.png');
   background-size: cover;
-  background-position: center;
+  background-position: center right;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -64,22 +64,23 @@
   font-size: 60px;
   font-weight: 700;
   color: var(--color-text-white);
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   line-height: 1.2;
 }
 
 .hero-button {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   background: transparent;
   border: none;
   color: var(--color-text-white);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition-default);
   padding: 0;
+  margin-top: 20px;
 }
 
 .hero-button:hover {
@@ -92,9 +93,39 @@
 }
 
 .arrow-icon {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
+}
+
+/* 장식 요소 */
+.hero::after {
+  content: '';
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  right: 15%;
+  top: 20%;
+  width: 2px;
+  height: 300px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  z-index: 1;
 }
 
 /* 반응형 */

@@ -1,11 +1,13 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 16px;
+  left: 24px;
+  right: 24px;
   height: var(--header-height);
   background-color: var(--color-header-bg);
   backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -15,7 +17,7 @@
   max-width: var(--container-max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
