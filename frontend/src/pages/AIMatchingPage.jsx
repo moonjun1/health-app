@@ -10,11 +10,13 @@ const AIMatchingPage = () => {
       {/* Main Content */}
       <section className="ai-main-section">
         <h1 className="ai-main-title">
-          "AI가 당신의 건강 데이터를 분석해<br />
+          "AI가 당신의 건강 데이터를 분석해
+          <br />
           맞춤 코치를 추천합니다."
         </h1>
         <p className="ai-main-subtitle">
-          AI analyzes your<br />
+          AI analyzes your
+          <br />
           health data and recommends a custom coach.
         </p>
 
@@ -72,7 +74,11 @@ const AIMatchingPage = () => {
             <p className="footer-hours">고객센터 평일 10:00~18:00 (주말/공휴일 휴무)</p>
           </div>
           <div className="footer-address">
-            <p>서울특별시 성동구 왕십리로 00길 00, 3층<br />(주)투리플레이</p>
+            <p>
+              서울특별시 성동구 왕십리로 00길 00, 3층
+              <br />
+              (주)투리플레이
+            </p>
           </div>
           <div className="footer-social">
             <p>Instagram | 2play_health | www.2play.com</p>
