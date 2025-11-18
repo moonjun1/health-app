@@ -90,9 +90,11 @@
 /* Honeycomb Container */
 .ai-honeycomb-container {
   position: relative;
-  width: 800px;
-  height: 800px;
+  width: 100%;
+  max-width: 1400px;
+  height: 600px;
   margin: 0 auto 80px;
+  padding: 0 60px;
 }
 
 .honeycomb-image {
@@ -100,7 +102,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 800px;
+  max-width: 90%;
   height: auto;
   z-index: 2;
 }
@@ -108,37 +111,41 @@
 /* AI Boxes */
 .ai-box {
   position: absolute;
-  background: white;
-  border-radius: 20px;
-  padding: 30px 40px;
-  font-size: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 35px 50px;
+  font-size: 24px;
   font-weight: 600;
   color: #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   z-index: 3;
-  min-width: 200px;
+  min-width: 240px;
   text-align: center;
   border: 2px solid #e0e0e0;
 }
 
 .ai-box-topleft {
-  top: 100px;
-  left: 50px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .ai-box-topright {
-  top: 100px;
-  right: 50px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .ai-box-bottomleft {
-  bottom: 100px;
-  left: 50px;
+  top: 50%;
+  left: 0;
+  transform: translateY(50%);
 }
 
 .ai-box-bottomright {
-  bottom: 100px;
-  right: 50px;
+  top: 50%;
+  right: 0;
+  transform: translateY(50%);
 }
 
 /* Connecting Lines */
