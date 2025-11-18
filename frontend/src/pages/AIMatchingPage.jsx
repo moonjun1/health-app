@@ -7,6 +7,9 @@ const AIMatchingPage = () => {
     <div className="ai-matching-page">
       <Header />
 
+      {/* Logo */}
+      <div className="ai-logo">logo</div>
+
       {/* Main Content */}
       <section className="ai-main-section">
         <h1 className="ai-main-title">
@@ -19,6 +22,21 @@ const AIMatchingPage = () => {
           <br />
           health data and recommends a custom coach.
         </p>
+
+        {/* Search Bar */}
+        <div className="ai-search-bar">
+          <input
+            type="text"
+            placeholder="새로운 활동하기"
+            className="ai-search-input"
+          />
+          <button className="ai-search-button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="9" cy="9" r="6" stroke="white" strokeWidth="2"/>
+              <path d="M14 14L18 18" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+          </button>
+        </div>
 
         {/* Honeycomb Center */}
         <div className="ai-honeycomb-container">
@@ -40,10 +58,10 @@ const AIMatchingPage = () => {
 
           {/* Connecting lines */}
           <svg className="ai-connections" viewBox="0 0 800 800">
-            <line x1="200" y1="200" x2="350" y2="350" stroke="#5b9bd5" strokeWidth="2"/>
-            <line x1="600" y1="200" x2="450" y2="350" stroke="#5b9bd5" strokeWidth="2"/>
-            <line x1="200" y1="600" x2="350" y2="450" stroke="#5b9bd5" strokeWidth="2"/>
-            <line x1="600" y1="600" x2="450" y2="450" stroke="#5b9bd5" strokeWidth="2"/>
+            <line x1="200" y1="200" x2="350" y2="350" stroke="white" strokeWidth="2"/>
+            <line x1="600" y1="200" x2="450" y2="350" stroke="white" strokeWidth="2"/>
+            <line x1="200" y1="600" x2="350" y2="450" stroke="white" strokeWidth="2"/>
+            <line x1="600" y1="600" x2="450" y2="450" stroke="white" strokeWidth="2"/>
           </svg>
 
           {/* Circles */}
