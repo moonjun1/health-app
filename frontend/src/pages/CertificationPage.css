@@ -1,5 +1,5 @@
 .certification-page {
-  background: linear-gradient(180deg, #5a7e9c 0%, #769dbd 50%, #6b91b0 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #769dbd 30%, #6b91b0 100%);
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
@@ -82,88 +82,71 @@
   object-fit: contain;
 }
 
-/* Description Section */
-.cert-description {
+/* Quote Section */
+.cert-quote-section {
+  background: white;
   padding: 80px 60px;
-  background: linear-gradient(180deg, rgba(118, 157, 189, 0.8) 0%, rgba(118, 157, 189, 0.95) 100%);
+  text-align: center;
 }
 
-.desc-text {
+.cert-quote-text {
   color: #546471;
   font-size: 36px;
   font-weight: 500;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
   line-height: 1.8;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Patents Section */
-.cert-patents {
+.cert-patents-section {
   position: relative;
-  min-height: 100vh;
-  padding: 120px 60px;
-  background: linear-gradient(180deg, rgba(118, 157, 189, 0.8) 0%, rgba(118, 157, 189, 0.95) 100%);
-  z-index: 1;
+  min-height: 120vh;
+  padding: 80px 60px 120px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(118, 157, 189, 0.3) 50%, #769dbd 100%);
 }
 
-.patents-title {
-  color: #546471;
-  font-size: 60px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.patents-quote {
-  color: #546471;
-  font-size: 40px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.5;
-  margin-bottom: 80px;
-}
-
-.patents-grid {
+.patents-boxes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto 60px;
 }
 
 .patent-box {
   background: #546471;
-  border-radius: 69px;
-  padding: 60px 40px;
+  border-radius: 30px;
+  padding: 50px 30px;
   color: var(--color-text-white);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
   text-align: center;
-  line-height: 2;
-  box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.25);
-  min-height: 400px;
+  line-height: 1.8;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Trainers Section */
-.cert-trainers {
-  position: relative;
-  min-height: 80vh;
-  padding: 100px 60px;
-  background: linear-gradient(180deg, rgba(118, 157, 189, 0.6) 0%, #769dbd 100%);
+.connecting-lines {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+  display: block;
+  pointer-events: none;
 }
 
 .trainers-title {
   color: var(--color-text-white);
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 600;
   text-align: center;
-  letter-spacing: 0.1em;
-  line-height: 2;
-  margin-bottom: 80px;
+  letter-spacing: 0.05em;
+  margin-bottom: 60px;
+  margin-top: 40px;
 }
 
 .verification-flow {
@@ -207,24 +190,50 @@
 .trainers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
   align-items: center;
   justify-items: center;
 }
 
 .trainer-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .trainer-card img {
   width: 100%;
-  max-width: 450px;
+  max-width: 350px;
   height: auto;
   object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.trainer-name {
+  color: var(--color-text-white);
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Bottom Description */
+.cert-bottom-description {
+  background: #769dbd;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.bottom-desc-text {
+  color: var(--color-text-white);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .verification-desc {

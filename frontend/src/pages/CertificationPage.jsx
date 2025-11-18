@@ -7,34 +7,71 @@ const CertificationPage = () => {
     <div className="certification-page">
       <Header />
       
-      {/* Section 1: Hero */}
-      <section className="cert-hero">
-        <h1 className="cert-title">특허 인증</h1>
-        <img src="/patent-logo.png" alt="특허청" className="patent-logo-img" />
-      </section>
-
-      {/* Section 2: Description */}
-      <section className="cert-description">
-        <p className="desc-text">
-          AI와 전문가가 함께 만드는 신뢰 기반의 코칭 시스템. 특허받은 기술과 공식 인증 절차로, 모든 사용자에게 안정적인 서비스를 제공합니다
+      {/* Section 1: Quote */}
+      <section className="cert-quote-section">
+        <p className="cert-quote-text">
+          "운동 데이터를 단순히 수집하는 것을 넘어,<br />
+          개인별 피드백으로 발전시키는 기술입니다."
         </p>
       </section>
 
-      {/* Section 3: Trainers */}
-      <section className="cert-trainers">
+      {/* Section 2: Patents */}
+      <section className="cert-patents-section">
+        <div className="patents-boxes">
+          <div className="patent-box">
+            AI 기반 맞춤<br />
+            운동 추천 시스템<br />
+            (특허 제10-XXXXXXX호)
+          </div>
+          <div className="patent-box">
+            운동 데이터 분석을 통한<br />
+            피드백 알고리즘<br />
+            (출원 중)
+          </div>
+          <div className="patent-box">
+            헬스케어 코칭<br />
+            매칭 플랫폼<br />
+            (등록 완료)
+          </div>
+        </div>
+
+        {/* V-shaped connecting lines */}
+        <svg className="connecting-lines" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+          <line x1="200" y1="0" x2="600" y2="200" stroke="#5b9bd5" strokeWidth="3"/>
+          <line x1="600" y1="0" x2="600" y2="200" stroke="#5b9bd5" strokeWidth="3"/>
+          <line x1="1000" y1="0" x2="600" y2="200" stroke="#5b9bd5" strokeWidth="3"/>
+
+          <line x1="600" y1="200" x2="300" y2="400" stroke="#5b9bd5" strokeWidth="3"/>
+          <line x1="600" y1="200" x2="600" y2="400" stroke="#5b9bd5" strokeWidth="3"/>
+          <line x1="600" y1="200" x2="900" y2="400" stroke="#5b9bd5" strokeWidth="3"/>
+        </svg>
+
         <h2 className="trainers-title">모든 코치는 검증된 전문가입니다.</h2>
 
         <div className="trainers-grid">
           <div className="trainer-card">
-            <img src="/trainer1.png" alt="트레이너 1" />
+            <img src="/trainer1.png" alt="김성준 트레이너" />
+            <p className="trainer-name">김성준 트레이너</p>
           </div>
           <div className="trainer-card">
-            <img src="/trainer2.png" alt="트레이너 2" />
+            <img src="/trainer2.png" alt="박지수 트레이너" />
+            <p className="trainer-name">박지수 트레이너</p>
           </div>
           <div className="trainer-card">
-            <img src="/trainer3.png" alt="트레이너 3" />
+            <img src="/trainer3.png" alt="조우민 트레이너" />
+            <p className="trainer-name">조우민 트레이너</p>
           </div>
         </div>
+      </section>
+
+      {/* Section 3: Description */}
+      <section className="cert-bottom-description">
+        <p className="bottom-desc-text">
+          등록된 코치는 자격증, 경력, 활동 이력 등을<br />
+          플랫폼 내부 심사 절차를 통해 공식 인증받습니다.<br />
+          AI와 사람이 함께 검증하는 이중 구조로,<br />
+          사용자에게 더욱 믿을 수 있는 코칭 환경을 제공합니다.
+        </p>
       </section>
 
       {/* Section 4: Certification Process */}
