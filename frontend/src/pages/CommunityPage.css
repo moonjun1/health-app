@@ -32,6 +32,9 @@
   height: 20px;
   line-height: 20px;
   padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .search-input::placeholder {
