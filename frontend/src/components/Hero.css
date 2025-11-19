@@ -52,12 +52,10 @@
 }
 
 .hero-logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: #ffffff;
+  width: auto;
+  height: 40px;
   margin-bottom: 50px;
-  opacity: 1;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+  object-fit: contain;
 }
 
 .hero-subtitle {
@@ -188,7 +186,7 @@
   }
 
   .hero-logo {
-    font-size: 28px;
+    height: 36px;
   }
 }
 
@@ -206,7 +204,7 @@
   }
 
   .hero-logo {
-    font-size: 24px;
+    height: 32px;
     margin-bottom: 24px;
   }
 

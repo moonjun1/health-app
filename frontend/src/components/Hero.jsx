@@ -49,7 +49,7 @@ const Hero = () => {
       )}
 
       <div className={`hero-content ${currentSlide === 1 ? 'slide-down' : ''}`}>
-        <div className="hero-logo">logo</div>
+        <img src="/logo.png" alt="2RE PLAY" className="hero-logo" />
         <h2 className="hero-subtitle">{slides[currentSlide].subtitle}</h2>
         <h1 className="hero-title">{slides[currentSlide].title}</h1>
         {slides[currentSlide].description && (
