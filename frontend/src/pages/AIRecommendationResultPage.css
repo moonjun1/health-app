@@ -1,0 +1,21 @@
+.ai-result-page {
+  background: linear-gradient(to bottom, #769dbd 0%, #5a7e9c 100%);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.ai-result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 40px;
+  min-height: 100vh;
+}
+
+.ai-result-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+}

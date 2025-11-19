@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import './AIMatchingPage.css';
 
 const AIMatchingPage = () => {
+  const navigate = useNavigate();
+
+  const handleRecommendation = () => {
+    navigate('/ai-recommendation-result');
+  };
+
   return (
     <div className="ai-matching-page">
       <Header />
@@ -44,7 +51,9 @@ const AIMatchingPage = () => {
         </div>
 
         {/* CTA Button */}
-        <button className="ai-cta-button">AI 코치 추천 받기</button>
+        <button className="ai-cta-button" onClick={handleRecommendation}>
+          AI 코치 추천 받기
+        </button>
       </section>
 
       {/* Footer */}
