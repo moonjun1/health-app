@@ -1,49 +1,169 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Header from '../components/Header';
 import './MapPage.css';
 
 const MapPage = () => {
+  const [map, setMap] = useState(null);
+  const [selectedGym, setSelectedGym] = useState(null);
+
   const gyms = [
-    { id: 1, name: '인제체육관', address: '서울시 강남구', phone: '02-1234-5678' },
-    { id: 2, name: '원효로다목적체육관', address: '서울시 용산구', phone: '02-2345-6789' },
-    { id: 3, name: '올림픽체조경기장', address: '서울시 송파구', phone: '02-3456-7890' },
+    {
+      id: 1,
+      name: '한울도립체육관',
+      address: '서울시 강남구 테헤란로 123',
+      hours: '06:00-22:00',
+      phone: '02-1234-5678',
+      tags: ['헬스', '수영'],
+      lat: 37.4979,
+      lng: 127.0276
+    },
+    {
+      id: 2,
+      name: '양양군민체육관',
+      address: '서울시 서초구 서초대로 456',
+      hours: '06:00-23:00',
+      phone: '02-2345-6789',
+      tags: ['헬스', '필라테스'],
+      lat: 37.4833,
+      lng: 127.0322
+    },
+    {
+      id: 3,
+      name: '진부체육관',
+      address: '서울시 강남구 강남대로 789',
+      hours: '24시간',
+      phone: '02-3456-7890',
+      tags: ['헬스', '크로스핏'],
+      lat: 37.5019,
+      lng: 127.0411
+    },
+    {
+      id: 4,
+      name: '서울특별체육관',
+      address: '서울시 송파구 올림픽로 321',
+      hours: '05:00-24:00',
+      phone: '02-4567-8901',
+      tags: ['헬스', '수영', '농구'],
+      lat: 37.5145,
+      lng: 127.1029
+    },
+    {
+      id: 5,
+      name: '상경체육관',
+      address: '서울시 강동구 천호대로 654',
+      hours: '06:00-22:00',
+      phone: '02-5678-9012',
+      tags: ['헬스', '요가'],
+      lat: 37.5301,
+      lng: 127.1238
+    }
   ];
+
+  useEffect(() => {
+    // 카카오 맵 스크립트 로드
+    const script = document.createElement('script');
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_MAP_API_KEY&autoload=false`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      window.kakao.maps.load(() => {
+        const container = document.getElementById('map');
+        const options = {
+          center: new window.kakao.maps.LatLng(37.5019, 127.0411),
+          level: 5
+        };
+
+        const kakaoMap = new window.kakao.maps.Map(container, options);
+        setMap(kakaoMap);
+
+        // 마커 추가
+        gyms.forEach(gym => {
+          const markerPosition = new window.kakao.maps.LatLng(gym.lat, gym.lng);
+          const marker = new window.kakao.maps.Marker({
+            position: markerPosition,
+            map: kakaoMap
+          });
+
+          // 마커 클릭 이벤트
+          window.kakao.maps.event.addListener(marker, 'click', () => {
+            setSelectedGym(gym);
+            kakaoMap.setCenter(markerPosition);
+          });
+        });
+      });
+    };
+
+    return () => {
+      if (script.parentNode) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <div className="map-page">
-      <header className="map-header">
-        <div className="map-logo">logo</div>
-        <nav className="map-nav">
-          <a href="/main">홈</a>
-          <a href="#certificate">자격증/소개</a>
-          <a href="#recruit">인재모집</a>
-          <a href="#community">커뮤니티</a>
-          <a href="#mypage">마이페이지</a>
-          <a href="#service">서비스 이용</a>
-          <a href="/login">LOGIN</a>
-        </nav>
-      </header>
+      <Header />
 
       <div className="map-container">
-        <div className="map-sidebar">
-          <h2>주변 체육관</h2>
+        {/* Left Sidebar - Gym List */}
+        <div className="gym-list-sidebar">
+          <div className="gym-list-header">
+            <h2>주변 체육관</h2>
+            <div className="filter-buttons">
+              <button className="filter-btn active">전체</button>
+              <button className="filter-btn">헬스</button>
+              <button className="filter-btn">수영</button>
+              <button className="filter-btn">필라테스</button>
+            </div>
+          </div>
+
           <div className="gym-list">
-            {gyms.map((gym) => (
-              <div key={gym.id} className="gym-item">
-                <h3>{gym.name}</h3>
-                <p>{gym.address}</p>
-                <p>{gym.phone}</p>
+            {gyms.map(gym => (
+              <div
+                key={gym.id}
+                className={`gym-item ${selectedGym?.id === gym.id ? 'selected' : ''}`}
+                onClick={() => setSelectedGym(gym)}
+              >
+                <div className="gym-image">
+                  <div className="gym-image-placeholder"></div>
+                </div>
+                <div className="gym-info">
+                  <h3>{gym.name}</h3>
+                  <p className="gym-address">📍 {gym.address}</p>
+                  <p className="gym-hours">⏰ {gym.hours}</p>
+                  <p className="gym-phone">📞 {gym.phone}</p>
+                  <div className="gym-tags">
+                    {gym.tags.map((tag, index) => (
+                      <span key={index} className="gym-tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="map-view">
-          <div className="map-placeholder">
-            <p>지도 영역</p>
-            <p className="map-note">실제 구현시 카카오맵 또는 구글맵 API 사용</p>
-          </div>
-        </div>
+        {/* Right Side - Map */}
+        <div id="map" className="kakao-map"></div>
       </div>
+
+      {/* Selected Gym Info Popup */}
+      {selectedGym && (
+        <div className="gym-detail-popup">
+          <button className="close-popup" onClick={() => setSelectedGym(null)}>×</button>
+          <h3>{selectedGym.name}</h3>
+          <p className="popup-address">📍 {selectedGym.address}</p>
+          <p className="popup-hours">⏰ {selectedGym.hours}</p>
+          <p className="popup-phone">📞 {selectedGym.phone}</p>
+          <div className="gym-tags">
+            {selectedGym.tags.map((tag, index) => (
+              <span key={index} className="gym-tag">{tag}</span>
+            ))}
+          </div>
+          <button className="detail-button">상세보기</button>
+        </div>
+      )}
     </div>
   );
 };

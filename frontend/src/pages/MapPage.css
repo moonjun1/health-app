@@ -1,113 +1,247 @@
 .map-page {
   min-height: 100vh;
-  background: #769DBD;
-}
-
-.map-header {
-  width: 100%;
-  height: 80px;
-  background: rgba(90, 127, 160, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 60px;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-}
-
-.map-logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: white;
-}
-
-.map-nav {
-  display: flex;
-  gap: 40px;
-}
-
-.map-nav a {
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  transition: opacity 0.3s;
+  background: #f5f5f5;
+  position: relative;
 }
 
 .map-container {
-  padding-top: 80px;
   display: flex;
   height: calc(100vh - 80px);
+  margin-top: 80px;
 }
 
-.map-sidebar {
-  width: 350px;
+/* Left Sidebar - Gym List */
+.gym-list-sidebar {
+  width: 420px;
   background: white;
-  padding: 30px;
   overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
-.map-sidebar h2 {
-  font-size: 24px;
-  margin-bottom: 24px;
+.gym-list-header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 5;
+}
+
+.gym-list-header h2 {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
   color: #333;
+  margin: 0 0 15px 0;
 }
 
-.gym-list {
+.filter-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  background: #769dbd;
+  color: white;
+}
+
+.filter-btn:hover {
+  background: #e0e0e0;
+}
+
+.filter-btn.active:hover {
+  background: #5a7e9c;
+}
+
+/* Gym List */
+.gym-list {
+  padding: 10px;
 }
 
 .gym-item {
-  padding: 20px;
-  background: #f8f9fa;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 
 .gym-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #769dbd;
 }
 
-.gym-item h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
+.gym-item.selected {
+  border-color: #769dbd;
+  background: #f8fbfd;
+  box-shadow: 0 2px 8px rgba(118, 157, 189, 0.2);
+}
+
+.gym-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gym-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #769dbd 0%, #5a7e9c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gym-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gym-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gym-info h3 {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.gym-address,
+.gym-hours,
+.gym-phone {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.gym-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.gym-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #e8f0f7;
+  border-radius: 12px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #5a7e9c;
+}
+
+/* Right Side - Map */
+.kakao-map {
+  flex: 1;
+  position: relative;
+}
+
+/* Selected Gym Detail Popup */
+.gym-detail-popup {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.close-popup:hover {
   color: #333;
 }
 
-.gym-item p {
+.gym-detail-popup h3 {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px 0;
+  padding-right: 30px;
+}
+
+.popup-address,
+.popup-hours,
+.popup-phone {
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
   color: #666;
-  margin: 4px 0;
+  margin: 8px 0;
 }
 
-.map-view {
-  flex: 1;
-  background: #e0e0e0;
-}
-
-.map-placeholder {
+.detail-button {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #666;
+  padding: 12px;
+  margin-top: 15px;
+  background: #769dbd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.map-placeholder p {
-  font-size: 24px;
-  margin: 10px 0;
+.detail-button:hover {
+  background: #5a7e9c;
 }
 
-.map-note {
-  font-size: 14px !important;
-  color: #999 !important;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gym-list-sidebar {
+    width: 350px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -115,12 +249,17 @@
     flex-direction: column;
   }
 
-  .map-sidebar {
+  .gym-list-sidebar {
     width: 100%;
-    height: 40%;
+    height: 45vh;
   }
 
-  .map-view {
-    height: 60%;
+  .kakao-map {
+    height: 55vh;
+  }
+
+  .gym-detail-popup {
+    width: 90%;
+    max-width: 350px;
   }
 }
