@@ -6,6 +6,29 @@
   overflow: hidden;
 }
 
+/* Background Gradient Overlay */
+.ai-result-page::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(90, 126, 156, 1) 0%,
+    rgba(90, 126, 156, 0.6) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ai-result-page > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* Coach Indicator */
 .coach-indicator {
   position: absolute;
