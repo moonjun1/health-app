@@ -28,8 +28,8 @@
   width: 60%;
   height: 100%;
   background: linear-gradient(90deg,
-    rgba(118, 157, 189, 0.85) 0%,
-    rgba(118, 157, 189, 0.6) 50%,
+    rgba(20, 30, 40, 0.95) 0%,
+    rgba(30, 40, 50, 0.85) 50%,
     transparent 100%
   );
   z-index: 2;
@@ -38,47 +38,59 @@
 .hero-content {
   position: relative;
   z-index: 3;
-  padding: 120px 60px 60px;
+  padding: 120px 60px 60px 40px;
   max-width: 1920px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   transition: transform 0.8s ease-in-out, padding 0.8s ease-in-out;
+  text-align: left;
 }
 
 .hero-content.slide-down {
   padding-top: 180px;
+  padding-left: 40px;
 }
 
 .hero-logo {
   font-size: 24px;
-  font-weight: 700;
-  color: var(--color-text-white);
+  font-weight: 800;
+  color: #ffffff;
   margin-bottom: 50px;
+  opacity: 1;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitle {
   font-size: 28px;
-  font-weight: 400;
-  color: var(--color-text-white);
+  font-weight: 700;
+  color: #ffffff;
   margin-bottom: 12px;
   line-height: 1.4;
+  text-align: left;
+  opacity: 1;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-title {
   font-size: 60px;
-  font-weight: 700;
-  color: var(--color-text-white);
+  font-weight: 800;
+  color: #ffffff;
   margin-bottom: 24px;
   line-height: 1.2;
+  text-align: left;
+  opacity: 1;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-description {
   font-size: 18px;
-  font-weight: 400;
-  color: var(--color-text-white);
+  font-weight: 700;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 40px;
-  opacity: 0.95;
+  opacity: 1;
+  text-align: left;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-button {
@@ -87,13 +99,14 @@
   gap: 12px;
   background: transparent;
   border: none;
-  color: var(--color-text-white);
+  color: #ffffff;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: var(--transition-default);
   padding: 0;
   margin-top: 20px;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-button:hover {
@@ -181,7 +194,7 @@
 
 @media (max-width: 768px) {
   .hero-content {
-    padding: 100px 24px 40px;
+    padding: 100px 24px 40px 20px;
   }
 
   .hero-title {
