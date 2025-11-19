@@ -1,13 +1,16 @@
+/* Hero 섹션 전체 컨테이너 */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+  background: linear-gradient(135deg, #4FAEEE 0%, #3D8FD1 50%, #2C6FAA 100%);
 }
 
+/* 배경 이미지 */
 .hero-background {
   position: absolute;
   top: 0;
@@ -17,80 +20,72 @@
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out;
-  z-index: 0;
+  z-index: 1;
 }
 
+/* 어두운 오버레이 */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 60%;
   height: 100%;
-  background: linear-gradient(90deg,
-    rgba(20, 30, 40, 0.95) 0%,
-    rgba(30, 40, 50, 0.85) 50%,
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 60%,
     transparent 100%
   );
   z-index: 2;
 }
 
+/* 텍스트 컨텐츠 영역 */
 .hero-content {
   position: relative;
-  z-index: 3;
-  padding: 120px 60px 60px 40px;
-  max-width: 1920px;
-  width: 100%;
-  margin: 0;
-  transition: transform 0.8s ease-in-out, padding 0.8s ease-in-out;
-  text-align: left;
+  z-index: 10;
+  padding: 40px 60px;
+  max-width: 800px;
 }
 
-.hero-content.slide-down {
-  padding-top: 180px;
-  padding-left: 40px;
-}
-
+/* 로고 */
 .hero-logo {
   width: auto;
   height: 40px;
-  margin-bottom: 50px;
-  object-fit: contain;
+  margin-bottom: 40px;
+  display: block;
 }
 
+/* 부제목 */
 .hero-subtitle {
   font-size: 28px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   line-height: 1.4;
-  text-align: left;
-  opacity: 1;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* 제목 */
 .hero-title {
   font-size: 60px;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 24px;
   line-height: 1.2;
-  text-align: left;
-  opacity: 1;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* 설명 */
 .hero-description {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   color: #ffffff;
-  line-height: 1.6;
   margin-bottom: 40px;
-  opacity: 1;
-  text-align: left;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* 버튼 */
 .hero-button {
   display: inline-flex;
   align-items: center;
@@ -101,10 +96,9 @@
   font-size: 22px;
   font-weight: 700;
   cursor: pointer;
-  transition: var(--transition-default);
   padding: 0;
-  margin-top: 20px;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-button:hover {
@@ -113,53 +107,29 @@
 }
 
 .hero-button span {
-  line-height: 1;
+  color: #ffffff;
 }
 
+/* 화살표 아이콘 */
 .arrow-icon {
   width: 36px;
   height: 36px;
-  flex-shrink: 0;
+  color: #ffffff;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
 
-/* 장식 요소 */
-.hero-corner-circle {
-  position: absolute;
-  right: -250px;
-  top: -250px;
-  width: 700px;
-  height: 700px;
-  background: rgba(107, 145, 176, 0.35);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.hero-diagonal-stripe {
-  position: absolute;
-  right: -200px;
-  bottom: -300px;
-  width: 1000px;
-  height: 1000px;
-  background: linear-gradient(135deg,
-    transparent 0%,
-    rgba(91, 155, 213, 0.25) 35%,
-    rgba(91, 155, 213, 0.45) 100%
-  );
-  transform: rotate(-35deg);
-  transform-origin: bottom right;
-  z-index: 1;
-}
-
+/* 장식 고리 이미지 */
 .hero-rings-image {
   position: absolute;
   right: 80px;
-  top: 120px;
+  top: 50%;
+  transform: translateY(-50%);
   width: auto;
   height: auto;
   max-width: 400px;
   max-height: 500px;
   object-fit: contain;
-  z-index: 2;
+  z-index: 5;
   opacity: 0;
   animation: fadeInRings 1s ease-in-out forwards;
 }
@@ -167,22 +137,22 @@
 @keyframes fadeInRings {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-50%) translateX(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-50%) translateX(0);
   }
 }
 
-/* 반응형 */
+/* 반응형 - 태블릿 */
 @media (max-width: 1200px) {
   .hero-title {
-    font-size: 56px;
+    font-size: 48px;
   }
 
   .hero-subtitle {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .hero-logo {
@@ -190,17 +160,22 @@
   }
 }
 
+/* 반응형 - 모바일 */
 @media (max-width: 768px) {
   .hero-content {
-    padding: 100px 24px 40px 20px;
+    padding: 20px 24px;
   }
 
   .hero-title {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .hero-subtitle {
     font-size: 20px;
+  }
+
+  .hero-description {
+    font-size: 16px;
   }
 
   .hero-logo {
@@ -215,5 +190,14 @@
   .arrow-icon {
     width: 28px;
     height: 28px;
+  }
+
+  .hero-overlay {
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
   }
 }

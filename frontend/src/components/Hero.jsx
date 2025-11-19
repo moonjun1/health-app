@@ -23,39 +23,32 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 10000); // 10초
+    }, 10000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
 
   return (
     <section className="hero">
+      {/* 배경 이미지 */}
       {slides[currentSlide].background && (
         <div
           className="hero-background"
           style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
-        ></div>
-      )}
-      <div className="hero-corner-circle"></div>
-      <div className="hero-diagonal-stripe"></div>
-      <div className="hero-overlay"></div>
-
-      {slides[currentSlide].showRings && (
-        <img
-          src="/rings.png"
-          alt="체조 고리"
-          className="hero-rings-image"
         />
       )}
 
-      <div className={`hero-content ${currentSlide === 1 ? 'slide-down' : ''}`}>
+      {/* 어두운 오버레이 */}
+      <div className="hero-overlay" />
+
+      {/* 텍스트 컨텐츠 */}
+      <div className="hero-content">
         <img src="/logo.png" alt="2RE PLAY" className="hero-logo" />
         <h2 className="hero-subtitle">{slides[currentSlide].subtitle}</h2>
         <h1 className="hero-title">{slides[currentSlide].title}</h1>
         {slides[currentSlide].description && (
           <p className="hero-description">{slides[currentSlide].description}</p>
         )}
-
         <button className="hero-button">
           <span>찾으러 가기</span>
           <svg
@@ -82,6 +75,15 @@ const Hero = () => {
           </svg>
         </button>
       </div>
+
+      {/* 장식 고리 */}
+      {slides[currentSlide].showRings && (
+        <img
+          src="/rings.png"
+          alt="체조 고리"
+          className="hero-rings-image"
+        />
+      )}
     </section>
   );
 };
