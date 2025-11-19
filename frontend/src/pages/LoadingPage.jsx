@@ -8,7 +8,7 @@ const LoadingPage = () => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/main');
-    }, 2000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, [navigate]);
 
