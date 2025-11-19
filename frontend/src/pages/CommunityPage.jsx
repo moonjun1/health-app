@@ -13,13 +13,13 @@ const CommunityPage = () => {
       <Header />
 
       {/* Search Bar */}
-      <div className="search-container">
+      <div className="community-search-container">
         <input
           type="text"
           placeholder="새로운 활동검색"
-          className="search-input"
+          className="community-search-input"
         />
-        <button className="search-button">
+        <button className="community-search-button">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="11" cy="11" r="7" stroke="white" strokeWidth="2"/>
             <path d="M16 16L21 21" stroke="white" strokeWidth="2" strokeLinecap="round"/>

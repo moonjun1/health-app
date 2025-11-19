@@ -7,7 +7,7 @@
 }
 
 /* Search Bar */
-.search-container {
+.community-search-container {
   background: #5a7e9c;
   border-radius: 15px;
   width: 600px;
@@ -20,7 +20,7 @@
   gap: 8px;
 }
 
-.search-input {
+.community-search-input {
   flex: 1;
   background: transparent;
   border: none;
@@ -37,11 +37,11 @@
   text-overflow: ellipsis;
 }
 
-.search-input::placeholder {
+.community-search-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.search-button {
+.community-search-button {
   background: transparent;
   border: 1.5px solid white;
   border-radius: 50%;
@@ -55,12 +55,12 @@
   flex-shrink: 0;
 }
 
-.search-button svg {
+.community-search-button svg {
   width: 10px;
   height: 10px;
 }
 
-.search-button:hover {
+.community-search-button:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
