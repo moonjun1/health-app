@@ -258,11 +258,6 @@
 
 /* Responsive Design */
 @media (max-width: 1400px) {
-  .search-container {
-    width: 80%;
-    max-width: 900px;
-  }
-
   .content-grid {
     grid-template-columns: repeat(3, 300px);
     gap: 40px;
