@@ -6,7 +6,9 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="header-left">
-          <div className="logo">logo</div>
+          <a href="/main" className="logo-link">
+            <img src="/logo.png" alt="2RE PLAY" className="logo" />
+          </a>
         </div>
 
         <nav className="header-nav">
