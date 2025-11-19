@@ -9,15 +9,15 @@
 /* Search Bar */
 .search-container {
   background: #5a7e9c;
-  border-radius: 25px;
+  border-radius: 20px;
   width: 800px;
-  height: 45px;
+  height: 36px;
   margin: 160px auto 40px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  gap: 15px;
+  gap: 10px;
 }
 
 .search-input {
@@ -42,8 +42,8 @@
   background: transparent;
   border: 2px solid white;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,8 +53,8 @@
 }
 
 .search-button svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
 }
 
 .search-button:hover {
