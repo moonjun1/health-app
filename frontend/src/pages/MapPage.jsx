@@ -62,7 +62,7 @@ const MapPage = () => {
   useEffect(() => {
     // 카카오 맵 스크립트 로드
     const script = document.createElement('script');
-    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_MAP_API_KEY&autoload=false`;
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=bb4869a930660b479073d3a882c46c2c&autoload=false`;
     script.async = true;
     document.head.appendChild(script);
 
