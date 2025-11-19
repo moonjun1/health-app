@@ -9,9 +9,9 @@
 /* Search Bar */
 .search-container {
   background: #5a7e9c;
-  border-radius: 30px;
-  width: 900px;
-  height: 50px;
+  border-radius: 25px;
+  width: 800px;
+  height: 45px;
   margin: 160px auto 40px;
   display: flex;
   align-items: center;
