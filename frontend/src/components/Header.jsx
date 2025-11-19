@@ -15,7 +15,7 @@ const Header = () => {
           <a href="/certification" className="nav-link">특허·인증</a>
           <a href="#map" className="nav-link">지도</a>
           <a href="/recruit" className="nav-link">인재 모집</a>
-          <a href="#community" className="nav-link">커뮤니티</a>
+          <a href="/community" className="nav-link">커뮤니티</a>
           <a href="/ai-matching" className="nav-link">AI추천</a>
         </nav>
 

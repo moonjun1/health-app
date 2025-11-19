@@ -1,97 +1,90 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Header from '../components/Header';
 import './CommunityPage.css';
 
 const CommunityPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const popularSearches = ['헬스', '러닝', '배드민턴', '다이어트', '유명한 체육관', '자전거', '볼링'];
 
-  const categories = [
-    { id: 'all', name: '전체' },
-    { id: 'tips', name: '운동 팁' },
-    { id: 'review', name: '후기' },
-    { id: 'qna', name: 'Q&A' },
-    { id: 'free', name: '자유게시판' },
-  ];
-
-  const posts = [
-    { id: 1, category: 'tips', title: '초보자를 위한 스쿼트 자세 교정법', author: '김트레이너', views: 1234, likes: 89, comments: 23, time: '2시간 전' },
-    { id: 2, category: 'review', title: '3개월 PT 후기 - 10kg 감량 성공!', author: '운동왕', views: 2341, likes: 156, comments: 45, time: '5시간 전' },
-    { id: 3, category: 'qna', title: '헬스장 처음 가는데 준비물 뭐가 필요한가요?', author: '초보헬린이', views: 567, likes: 34, comments: 12, time: '1일 전' },
-    { id: 4, category: 'tips', title: '아침 운동 vs 저녁 운동, 뭐가 더 좋을까?', author: '건강지킴이', views: 3421, likes: 201, comments: 67, time: '1일 전' },
-    { id: 5, category: 'free', title: '운동 메이트 구합니다 (강남 쪽)', author: '같이운동', views: 789, likes: 45, comments: 18, time: '2일 전' },
-  ];
-
-  const filteredPosts = selectedCategory === 'all'
-    ? posts
-    : posts.filter(post => post.category === selectedCategory);
+  // Generate 16 placeholder boxes (4x4 grid)
+  const placeholderBoxes = Array.from({ length: 16 }, (_, i) => i + 1);
 
   return (
     <div className="community-page">
-      <header className="community-header">
-        <div className="community-logo">logo</div>
-        <nav className="community-nav">
-          <a href="/main">홈</a>
-          <a href="#certificate">자격증/소개</a>
-          <a href="#recruit">인재모집</a>
-          <a href="#community">커뮤니티</a>
-          <a href="#mypage">마이페이지</a>
-          <a href="#service">서비스 이용</a>
-          <a href="/login">LOGIN</a>
-        </nav>
-      </header>
+      <Header />
 
-      <div className="community-container">
-        <div className="community-hero">
-          <h1>커뮤니티</h1>
-          <p>운동 경험을 나누고 함께 성장하세요</p>
-        </div>
+      {/* Search Bar */}
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="새로운 활동검색"
+          className="search-input"
+        />
+        <button className="search-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="white" strokeWidth="2"/>
+            <path d="M16 16L21 21" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+      </div>
 
-        <div className="community-content">
-          <div className="community-sidebar">
-            <div className="category-list">
-              <h3>카테고리</h3>
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  className={`category-btn ${selectedCategory === category.id ? 'active' : ''}`}
-                  onClick={() => setSelectedCategory(category.id)}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </div>
-            <button className="write-btn">글쓰기</button>
-          </div>
-
-          <div className="community-main">
-            <div className="posts-header">
-              <h2>게시글</h2>
-              <div className="sort-options">
-                <button className="sort-btn active">최신순</button>
-                <button className="sort-btn">인기순</button>
-                <button className="sort-btn">조회순</button>
-              </div>
-            </div>
-
-            <div className="posts-list">
-              {filteredPosts.map((post) => (
-                <div key={post.id} className="post-item">
-                  <div className="post-category">{categories.find(c => c.id === post.category)?.name}</div>
-                  <h3 className="post-title">{post.title}</h3>
-                  <div className="post-meta">
-                    <span className="post-author">{post.author}</span>
-                    <span className="post-time">{post.time}</span>
-                  </div>
-                  <div className="post-stats">
-                    <span>조회 {post.views}</span>
-                    <span>좋아요 {post.likes}</span>
-                    <span>댓글 {post.comments}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* Popular Searches */}
+      <div className="popular-searches">
+        <h3 className="popular-title">인기검색어</h3>
+        <div className="search-divider"></div>
+        <div className="popular-tags">
+          {popularSearches.map((tag, index) => (
+            <span key={index} className="popular-tag">{tag}</span>
+          ))}
         </div>
       </div>
+
+      {/* Breadcrumb */}
+      <div className="breadcrumb">
+        <span>홈</span>
+        <div className="breadcrumb-divider"></div>
+        <span>커뮤니티</span>
+      </div>
+
+      {/* Content Grid */}
+      <div className="content-grid">
+        {placeholderBoxes.map((box) => (
+          <div key={box} className="content-box"></div>
+        ))}
+      </div>
+
+      {/* More Button */}
+      <button className="more-button">더보기</button>
+
+      {/* Footer */}
+      <footer className="community-footer">
+        <div className="footer-content">
+          <div className="footer-links">
+            <a href="#coach">코치소개</a>
+            <a href="#find">코치찾기</a>
+            <a href="#register">코치등록하기</a>
+          </div>
+          <div className="footer-contact">
+            <p className="footer-phone">1588-0000</p>
+            <p className="footer-hours">고객센터 평일 10:00~18:00 (주말/공휴일 휴무)</p>
+          </div>
+          <div className="footer-address">
+            <p>서울특별시 성동구 왕십리로 00길 00, 3층</p>
+            <p>(주)투리플레이</p>
+          </div>
+          <div className="footer-social-icons">
+            <div className="social-icon"></div>
+            <div className="social-icon"></div>
+            <div className="social-icon"></div>
+          </div>
+          <div className="footer-social">
+            <span>Instagram</span>
+            <div className="social-divider"></div>
+            <span>2play_health</span>
+            <div className="social-divider"></div>
+            <span>www.2play.com</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
