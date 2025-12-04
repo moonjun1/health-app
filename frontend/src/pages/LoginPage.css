@@ -140,64 +140,6 @@
   cursor: not-allowed;
 }
 
-.divider {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 24px 0;
-}
-
-.divider::before,
-.divider::after {
-  content: '';
-  flex: 1;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.divider span {
-  color: rgba(255, 255, 255, 0.8);
-  padding: 0 16px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.google-button {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  border-radius: 8px;
-  background: white;
-  color: #333;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-default);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.google-button:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-1px);
-}
-
-.google-button:active {
-  transform: translateY(0);
-}
-
-.google-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.google-icon {
-  width: 20px;
-  height: 20px;
-}
-
 /* 반응형 */
 @media (max-width: 768px) {
   .login-container {
