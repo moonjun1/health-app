@@ -6,7 +6,18 @@ const CertificationPage = () => {
   return (
     <div className="certification-page">
       <Header />
-      
+
+      {/* Hero Section */}
+      <section className="cert-hero">
+        <div className="cert-hero-content">
+          <h1 className="cert-hero-title">특허·인증</h1>
+          <p className="cert-hero-subtitle">
+            기술력과 전문성으로 검증된<br />
+            신뢰할 수 있는 헬스케어 플랫폼
+          </p>
+        </div>
+      </section>
+
       {/* Section 1: Quote */}
       <section className="cert-quote-section">
         <p className="cert-quote-text">
@@ -17,21 +28,22 @@ const CertificationPage = () => {
 
       {/* Section 2: Patents */}
       <section className="cert-patents-section">
+        <h2 className="patents-section-title">보유 특허 및 기술</h2>
         <div className="patents-boxes">
           <div className="patent-box">
-            AI 기반 맞춤<br />
-            운동 추천 시스템<br />
-            (특허 제10-XXXXXXX호)
+            <div className="patent-icon">🤖</div>
+            <h3 className="patent-title">AI 기반 맞춤<br />운동 추천 시스템</h3>
+            <p className="patent-status">특허 제10-XXXXXXX호</p>
           </div>
           <div className="patent-box">
-            운동 데이터 분석을 통한<br />
-            피드백 알고리즘<br />
-            (출원 중)
+            <div className="patent-icon">📊</div>
+            <h3 className="patent-title">운동 데이터 분석을 통한<br />피드백 알고리즘</h3>
+            <p className="patent-status">출원 중</p>
           </div>
           <div className="patent-box">
-            헬스케어 코칭<br />
-            매칭 플랫폼<br />
-            (등록 완료)
+            <div className="patent-icon">🎯</div>
+            <h3 className="patent-title">헬스케어 코칭<br />매칭 플랫폼</h3>
+            <p className="patent-status">등록 완료</p>
           </div>
         </div>
 
@@ -96,20 +108,29 @@ const CertificationPage = () => {
       {/* Footer */}
       <footer className="cert-footer">
         <div className="footer-content">
-          <div className="footer-links">
-            <a href="#coach">코치소개</a>
-            <a href="#find">코치찾기</a>
-            <a href="#register">코치등록하기</a>
+          <div className="footer-section">
+            <div className="footer-links">
+              <a href="#coach">코치소개</a>
+              <a href="#find">코치찾기</a>
+              <a href="#register">코치등록하기</a>
+            </div>
+            <div className="footer-contact">
+              <p className="footer-phone">1588-0000</p>
+              <p className="footer-hours">고객센터 평일 10:00~18:00 (주말/공휴일 휴무)</p>
+            </div>
           </div>
-          <div className="footer-contact">
-            <p className="footer-phone">1588-0000</p>
-            <p className="footer-hours">고객센터 평일 10:00~18:00 (주말/공휴일 휴무)</p>
-          </div>
-          <div className="footer-address">
-            <p>서울특별시 성동구 왕십리로 00길 00, 3층<br />(주)투리플레이</p>
-          </div>
-          <div className="footer-social">
-            <p>Instagram | 2play_health | www.2play.com</p>
+          <div className="footer-section footer-right">
+            <div className="footer-address">
+              <p>서울특별시 성동구 왕십리로 00길 00, 3층</p>
+              <p>(주)투리플레이</p>
+            </div>
+            <div className="footer-social">
+              <span>Instagram</span>
+              <div className="social-divider"></div>
+              <span>2play_health</span>
+              <div className="social-divider"></div>
+              <span>www.2play.com</span>
+            </div>
           </div>
         </div>
       </footer>

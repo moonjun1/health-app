@@ -1,5 +1,5 @@
 .certification-page {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #769dbd 30%, #6b91b0 100%);
+  background: #f5f5f5;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
@@ -8,90 +8,44 @@
 /* Hero Section */
 .cert-hero {
   position: relative;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 120px 60px 60px;
-  overflow: hidden;
+  background: linear-gradient(135deg, #769dbd 0%, #5a7e9c 100%);
+  padding: 120px 60px 80px;
 }
 
-/* Background particles */
-.particle {
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.6;
-  z-index: 1;
-}
-
-.particle-1 {
-  width: 8px;
-  height: 8px;
-  top: 15%;
-  left: 10%;
-}
-
-.particle-2 {
-  width: 6px;
-  height: 6px;
-  top: 25%;
-  right: 15%;
-}
-
-.particle-3 {
-  width: 10px;
-  height: 10px;
-  bottom: 30%;
-  left: 8%;
-}
-
-.particle-4 {
-  width: 5px;
-  height: 5px;
-  top: 40%;
-  left: 20%;
-}
-
-.particle-5 {
-  width: 7px;
-  height: 7px;
-  bottom: 20%;
-  right: 12%;
-}
-
-.particle-6 {
-  width: 6px;
-  height: 6px;
-  top: 60%;
-  right: 25%;
-}
-
-.cert-title {
-  color: var(--color-text-white);
-  font-size: 70px;
-  font-weight: 700;
+.cert-hero-content {
   text-align: center;
-  margin-bottom: 40px;
+  z-index: 10;
 }
 
-.patent-logo-img {
-  width: 400px;
-  height: auto;
-  object-fit: contain;
+.cert-hero-title {
+  color: white;
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+.cert-hero-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 /* Quote Section */
 .cert-quote-section {
   background: white;
-  padding: 80px 60px;
+  padding: 100px 60px;
   text-align: center;
 }
 
 .cert-quote-text {
   color: #546471;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 500;
   line-height: 1.8;
   max-width: 1000px;
@@ -101,96 +55,87 @@
 /* Patents Section */
 .cert-patents-section {
   position: relative;
-  min-height: 120vh;
-  padding: 80px 60px 120px;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(118, 157, 189, 0.3) 50%, #769dbd 100%);
+  padding: 100px 60px 120px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(118, 157, 189, 0.2) 50%, rgba(118, 157, 189, 0.4) 100%);
+}
+
+.patents-section-title {
+  color: #333;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
 }
 
 .patents-boxes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto 60px;
 }
 
 .patent-box {
-  background: #546471;
-  border-radius: 30px;
+  background: white;
+  border-radius: 20px;
   padding: 50px 30px;
-  color: var(--color-text-white);
-  font-size: 26px;
-  font-weight: 600;
   text-align: center;
-  line-height: 1.8;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.connecting-lines {
-  width: 100%;
-  max-width: 1200px;
-  height: 400px;
-  margin: 0 auto;
-  display: block;
-  pointer-events: none;
-}
-
-.trainers-title {
-  color: var(--color-text-white);
-  font-size: 42px;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 0.05em;
-  margin-bottom: 60px;
-  margin-top: 40px;
-}
-
-.verification-flow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1400px;
-  margin: 0 auto 120px;
-  gap: 20px;
-}
-
-.flow-step {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.flow-dot {
-  width: 60px;
-  height: 60px;
-  background: var(--color-text-white);
-  border-radius: 50%;
+.patent-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
-.flow-line {
-  flex: 1;
-  height: 4px;
-  background: var(--color-text-white);
-  min-width: 80px;
+.patent-icon {
+  font-size: 64px;
+  margin-bottom: 10px;
 }
 
-.flow-step p {
-  color: var(--color-text-white);
-  font-size: 24px;
+.patent-title {
+  color: #333;
+  font-size: 22px;
   font-weight: 600;
-  text-align: center;
   line-height: 1.6;
+  margin: 0;
+}
+
+.patent-status {
+  color: #769dbd;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.connecting-lines {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  margin: 60px auto 40px;
+  display: block;
+  pointer-events: none;
+}
+
+.trainers-title {
+  color: #333;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 60px;
+  margin-top: 40px;
 }
 
 .trainers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
+  gap: 60px;
   max-width: 1200px;
   margin: 0 auto 80px;
   align-items: center;
@@ -202,47 +147,43 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.trainer-card:hover {
+  transform: scale(1.05);
 }
 
 .trainer-card img {
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   height: auto;
   object-fit: contain;
   margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .trainer-name {
-  color: var(--color-text-white);
-  font-size: 28px;
+  color: #333;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
 }
 
 /* Bottom Description */
 .cert-bottom-description {
-  background: #769dbd;
-  padding: 80px 60px;
+  background: linear-gradient(135deg, #769dbd 0%, #6b91b0 100%);
+  padding: 100px 60px;
   text-align: center;
 }
 
 .bottom-desc-text {
-  color: var(--color-text-white);
-  font-size: 26px;
-  font-weight: 600;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
   line-height: 1.8;
-  letter-spacing: 0.03em;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.verification-desc {
-  color: var(--color-text-white);
-  font-size: 25px;
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.5;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -250,9 +191,8 @@
 /* Process Section */
 .cert-process {
   position: relative;
-  min-height: 100vh;
-  padding: 60px;
-  background: #769dbd;
+  padding: 100px 60px;
+  background: #5a7e9c;
 }
 
 .process-header {
@@ -263,139 +203,280 @@
 }
 
 .process-line {
-  height: 15px;
+  height: 12px;
   background: white;
   width: 100%;
+  opacity: 0.9;
 }
 
-.process-line:nth-child(2) { opacity: 0.8; height: 10px; }
-.process-line:nth-child(3) { opacity: 0.6; height: 8px; }
-.process-line:nth-child(4) { opacity: 0.4; height: 5px; }
-.process-line:nth-child(5) { opacity: 0.2; height: 3px; }
+.process-line:nth-child(2) { opacity: 0.7; height: 10px; }
+.process-line:nth-child(3) { opacity: 0.5; height: 8px; }
+.process-line:nth-child(4) { opacity: 0.3; height: 6px; }
+.process-line:nth-child(5) { opacity: 0.15; height: 4px; }
 
 .process-title-bar {
   background: white;
   padding: 40px;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
+  border-radius: 16px;
 }
 
 .process-title-bar h2 {
-  color: #000;
-  font-size: 60px;
-  font-weight: 600;
+  color: #333;
+  font-size: 48px;
+  font-weight: 700;
   text-align: center;
-  letter-spacing: 0.05em;
-  line-height: 2.5;
+  letter-spacing: 0.02em;
+  margin: 0;
 }
 
 .process-main-title {
-  color: var(--color-text-white);
-  font-size: 80px;
+  color: white;
+  font-size: 42px;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 0.05em;
-  line-height: 2.5;
-  margin-bottom: 60px;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  margin-bottom: 40px;
 }
 
 .process-subtitle {
-  color: var(--color-text-white);
-  font-size: 60px;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 28px;
+  font-weight: 500;
   text-align: center;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
 }
 
 /* Footer */
 .cert-footer {
-  background: #5a7e9c;
-  padding: 80px 60px;
+  background: #4a6d8c;
+  padding: 50px 40px 40px;
 }
 
 .footer-content {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  color: var(--color-text-white);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-right {
+  text-align: right;
+  align-items: flex-end;
 }
 
 .footer-links {
   display: flex;
-  gap: 120px;
-  margin-bottom: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
-  color: var(--color-text-white);
-  font-size: 20px;
-  font-weight: 600;
+  color: white;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
   transition: opacity 0.3s;
 }
 
 .footer-links a:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }
 
 .footer-contact {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .footer-phone {
-  font-size: 30px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .footer-hours {
-  font-size: 30px;
-  font-weight: 600;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.footer-address {
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 1.8;
-  margin-bottom: 40px;
+.footer-address p {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 5px 0;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-social {
-  font-size: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
   font-weight: 400;
+  flex-wrap: wrap;
+}
+
+.social-divider {
+  background: white;
+  width: 1px;
+  height: 12px;
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-  .cert-hero-circle {
-    width: 700px;
-    height: 700px;
+@media (max-width: 1024px) {
+  .cert-hero-title {
+    font-size: 56px;
   }
 
-  .patents-grid,
+  .cert-hero-subtitle {
+    font-size: 24px;
+  }
+
+  .patents-boxes,
   .trainers-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-right {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
-  .cert-title {
+  .cert-hero {
+    padding: 100px 30px 60px;
+    min-height: 50vh;
+  }
+
+  .cert-hero-title {
+    font-size: 42px;
+  }
+
+  .cert-hero-subtitle {
+    font-size: 20px;
+  }
+
+  .cert-quote-section {
+    padding: 60px 30px;
+  }
+
+  .cert-quote-text {
+    font-size: 24px;
+  }
+
+  .cert-patents-section {
+    padding: 60px 30px;
+  }
+
+  .patents-section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .patent-box {
+    padding: 40px 25px;
+  }
+
+  .patent-icon {
     font-size: 48px;
   }
 
-  .cert-hero-circle {
-    width: 90%;
-    height: auto;
-    aspect-ratio: 1;
+  .patent-title {
+    font-size: 18px;
   }
 
-  .verification-flow {
-    flex-direction: column;
+  .trainers-title {
+    font-size: 28px;
   }
 
-  .flow-line {
-    width: 4px;
-    height: 40px;
-    min-width: auto;
+  .trainer-card img {
+    max-width: 250px;
+  }
+
+  .trainer-name {
+    font-size: 20px;
+  }
+
+  .cert-bottom-description {
+    padding: 60px 30px;
+  }
+
+  .bottom-desc-text {
+    font-size: 18px;
+  }
+
+  .cert-process {
+    padding: 60px 30px;
+  }
+
+  .process-title-bar h2 {
+    font-size: 32px;
+  }
+
+  .process-main-title {
+    font-size: 28px;
+  }
+
+  .process-subtitle {
+    font-size: 20px;
+  }
+
+  .cert-footer {
+    padding: 30px 20px 25px;
+  }
+
+  .footer-content {
+    gap: 25px;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-phone {
+    font-size: 16px;
+  }
+
+  .footer-hours,
+  .footer-address p {
+    font-size: 12px;
+  }
+
+  .footer-social {
+    font-size: 12px;
+  }
+
+  .social-divider {
+    height: 10px;
   }
 }
