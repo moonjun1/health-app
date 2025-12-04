@@ -97,6 +97,47 @@
   transform: translateY(0);
 }
 
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: rgba(255, 107, 107, 0.9);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.toggle-auth {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 8px;
+  transition: var(--transition-default);
+}
+
+.toggle-button:hover {
+  opacity: 0.8;
+}
+
+.toggle-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* 반응형 */
 @media (max-width: 768px) {
   .login-container {
