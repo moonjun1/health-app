@@ -14,7 +14,9 @@ import SubscriptionPage from './pages/SubscriptionPage';
 import AIMatchingPage from './pages/AIMatchingPage';
 import AIRecommendationResultPage from './pages/AIRecommendationResultPage';
 import RecruitPage from './pages/RecruitPage';
+import ApplicationPage from './pages/ApplicationPage';
 import AboutPage from './pages/AboutPage';
+import IntroPage from './pages/IntroPage';
 import './App.css';
 
 function App() {
@@ -36,7 +38,9 @@ function App() {
           <Route path="/ai-matching" element={<AIMatchingPage />} />
           <Route path="/ai-recommendation-result" element={<AIRecommendationResultPage />} />
           <Route path="/recruit" element={<RecruitPage />} />
+          <Route path="/application" element={<ApplicationPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/intro" element={<IntroPage />} />
         </Routes>
       </div>
     </Router>
