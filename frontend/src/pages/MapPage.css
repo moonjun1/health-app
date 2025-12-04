@@ -83,7 +83,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s;
-  max-height: 120px;
+  max-height: 140px;
   overflow: hidden;
 }
 
@@ -126,21 +126,35 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   min-width: 0;
   justify-content: flex-start;
 }
 
-.gym-info h3 {
+.gym-address {
   font-family: 'Pretendard', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 3px 0;
-  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.gym-address,
+.gym-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.3;
+}
+
+.address-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .gym-hours,
 .gym-phone {
   font-family: 'Pretendard', sans-serif;
@@ -209,16 +223,23 @@
   color: #333;
 }
 
-.gym-detail-popup h3 {
+.popup-address {
   font-family: 'Pretendard', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
   padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.popup-address,
+.popup-address .gym-name {
+  font-size: 18px;
+}
+
+.popup-address .address-text {
+  font-size: 14px;
+}
+
 .popup-hours,
 .popup-phone {
   font-family: 'Pretendard', sans-serif;

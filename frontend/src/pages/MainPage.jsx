@@ -52,17 +52,17 @@ const MainPage = () => {
         <h2 className="section-title">추천 코치</h2>
         <div className="coaches-grid">
           <div className="coach-card">
-            <div className="coach-avatar"></div>
+            <div className="coach-avatar" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400)' }}></div>
             <h3 className="coach-name">박성곤 코치</h3>
             <p className="coach-specialty">헬스 전문</p>
           </div>
           <div className="coach-card">
-            <div className="coach-avatar"></div>
+            <div className="coach-avatar" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400)' }}></div>
             <h3 className="coach-name">송지연 코치</h3>
             <p className="coach-specialty">필라테스 전문</p>
           </div>
           <div className="coach-card">
-            <div className="coach-avatar"></div>
+            <div className="coach-avatar" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400)' }}></div>
             <h3 className="coach-name">김예나 코치</h3>
             <p className="coach-specialty">요가 전문</p>
           </div>
@@ -72,7 +72,30 @@ const MainPage = () => {
       {/* Footer */}
       <footer className="main-footer">
         <div className="footer-content">
-          <p className="footer-text">© 2024 2RE PLAY. All rights reserved.</p>
+          <div className="footer-section">
+            <div className="footer-links">
+              <a href="#coach">코치소개</a>
+              <a href="#find">코치찾기</a>
+              <a href="#register">코치등록하기</a>
+            </div>
+            <div className="footer-contact">
+              <p className="footer-phone">1588-0000</p>
+              <p className="footer-hours">고객센터 평일 10:00~18:00 (주말/공휴일 휴무)</p>
+            </div>
+          </div>
+          <div className="footer-section footer-right">
+            <div className="footer-address">
+              <p>서울특별시 성동구 왕십리로 00길 00, 3층</p>
+              <p>(주)투리플레이</p>
+            </div>
+            <div className="footer-social">
+              <span>Instagram</span>
+              <div className="social-divider"></div>
+              <span>2play_health</span>
+              <div className="social-divider"></div>
+              <span>www.2play.com</span>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

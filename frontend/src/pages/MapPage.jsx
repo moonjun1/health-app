@@ -15,7 +15,8 @@ const MapPage = () => {
       phone: '02-1234-5678',
       tags: ['헬스', '수영'],
       lat: 37.4979,
-      lng: 127.0276
+      lng: 127.0276,
+      image: '/images/Rectangle 115.png'
     },
     {
       id: 2,
@@ -25,7 +26,8 @@ const MapPage = () => {
       phone: '02-2345-6789',
       tags: ['헬스', '필라테스'],
       lat: 37.4833,
-      lng: 127.0322
+      lng: 127.0322,
+      image: '/images/Rectangle 116.png'
     },
     {
       id: 3,
@@ -35,7 +37,8 @@ const MapPage = () => {
       phone: '02-3456-7890',
       tags: ['헬스', '크로스핏'],
       lat: 37.5019,
-      lng: 127.0411
+      lng: 127.0411,
+      image: '/images/Rectangle 117.png'
     },
     {
       id: 4,
@@ -45,7 +48,8 @@ const MapPage = () => {
       phone: '02-4567-8901',
       tags: ['헬스', '수영', '농구'],
       lat: 37.5145,
-      lng: 127.1029
+      lng: 127.1029,
+      image: '/images/Rectangle 118.png'
     },
     {
       id: 5,
@@ -55,7 +59,8 @@ const MapPage = () => {
       phone: '02-5678-9012',
       tags: ['헬스', '요가'],
       lat: 37.5301,
-      lng: 127.1238
+      lng: 127.1238,
+      image: '/images/Rectangle 115.png'
     }
   ];
 
@@ -127,11 +132,13 @@ const MapPage = () => {
                 onClick={() => setSelectedGym(gym)}
               >
                 <div className="gym-image">
-                  <div className="gym-image-placeholder"></div>
+                  <img src={gym.image} alt={gym.name} />
                 </div>
                 <div className="gym-info">
-                  <h3>{gym.name}</h3>
-                  <p className="gym-address">📍 {gym.address}</p>
+                  <p className="gym-address">
+                    <strong className="gym-name">{gym.name}</strong>
+                    <span className="address-text">📍 {gym.address}</span>
+                  </p>
                   <p className="gym-hours">⏰ {gym.hours}</p>
                   <p className="gym-phone">📞 {gym.phone}</p>
                   <div className="gym-tags">
@@ -153,8 +160,10 @@ const MapPage = () => {
       {selectedGym && (
         <div className="gym-detail-popup">
           <button className="close-popup" onClick={() => setSelectedGym(null)}>×</button>
-          <h3>{selectedGym.name}</h3>
-          <p className="popup-address">📍 {selectedGym.address}</p>
+          <p className="popup-address">
+            <strong className="gym-name">{selectedGym.name}</strong>
+            <span className="address-text">📍 {selectedGym.address}</span>
+          </p>
           <p className="popup-hours">⏰ {selectedGym.hours}</p>
           <p className="popup-phone">📞 {selectedGym.phone}</p>
           <div className="gym-tags">

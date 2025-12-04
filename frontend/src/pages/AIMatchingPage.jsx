@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import './AIMatchingPage.css';
 
 const AIMatchingPage = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleRecommendation = () => {
-    navigate('/ai-recommendation-result');
+    setIsLoading(true);
+    setTimeout(() => {
+      navigate('/ai-recommendation-result');
+    }, 2000);
   };
 
   return (
@@ -51,10 +55,20 @@ const AIMatchingPage = () => {
         </div>
 
         {/* CTA Button */}
-        <button className="ai-cta-button" onClick={handleRecommendation}>
+        <button className="ai-cta-button" onClick={handleRecommendation} disabled={isLoading}>
           AI 코치 추천 받기
         </button>
       </section>
+
+      {/* Loading Overlay */}
+      {isLoading && (
+        <div className="loading-overlay">
+          <div className="loading-content">
+            <div className="loading-spinner"></div>
+            <p className="loading-text">AI가 코치를 분석하고 있습니다...</p>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="ai-footer">
