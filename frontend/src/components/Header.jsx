@@ -19,6 +19,7 @@ const Header = () => {
           <a href="/recruit" className="nav-link">인재 모집</a>
           <a href="/community" className="nav-link">커뮤니티</a>
           <a href="/ai-matching" className="nav-link">AI추천</a>
+          <a href="/subscription" className="nav-link">구독</a>
         </nav>
 
         <a href="/login" className="login-link">LOGIN</a>
