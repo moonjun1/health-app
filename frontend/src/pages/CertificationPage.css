@@ -8,12 +8,12 @@
 /* Hero Section */
 .cert-hero {
   position: relative;
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #769dbd 0%, #5a7e9c 100%);
-  padding: 120px 60px 80px;
+  padding: 140px 60px 100px;
 }
 
 .cert-hero-content {
@@ -23,45 +23,46 @@
 
 .cert-hero-title {
   color: white;
-  font-size: 72px;
+  font-size: 80px;
   font-weight: 800;
-  margin-bottom: 24px;
-  letter-spacing: 0.05em;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
 }
 
 .cert-hero-subtitle {
   color: rgba(255, 255, 255, 0.95);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* Quote Section */
 .cert-quote-section {
   background: white;
-  padding: 100px 60px;
+  padding: 120px 60px;
   text-align: center;
 }
 
 .cert-quote-text {
   color: #546471;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 500;
   line-height: 1.8;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
+  font-style: italic;
 }
 
 /* Patents Section */
 .cert-patents-section {
   position: relative;
-  padding: 100px 60px 120px;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(118, 157, 189, 0.2) 50%, rgba(118, 157, 189, 0.4) 100%);
+  padding: 120px 60px;
+  background: #f8f9fa;
 }
 
 .patents-section-title {
   color: #333;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 80px;
@@ -71,17 +72,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto 60px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .patent-box {
   background: white;
-  border-radius: 20px;
-  padding: 50px 30px;
+  border-radius: 24px;
+  padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,170 +90,256 @@
 }
 
 .patent-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.patent-icon-wrapper {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #769dbd 0%, #5a7e9c 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .patent-icon {
-  font-size: 64px;
-  margin-bottom: 10px;
+  font-size: 56px;
 }
 
 .patent-title {
   color: #333;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.6;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
   margin: 0;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .patent-status {
   color: #769dbd;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   margin: 0;
+  padding: 8px 20px;
+  background: rgba(118, 157, 189, 0.1);
+  border-radius: 20px;
 }
 
-.connecting-lines {
-  width: 100%;
-  max-width: 1200px;
-  height: 400px;
-  margin: 60px auto 40px;
-  display: block;
-  pointer-events: none;
+.patent-desc {
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
 }
 
-.trainers-title {
+/* Coaches Section */
+.cert-coaches-section {
+  padding: 120px 60px;
+  background: white;
+}
+
+.coaches-section-title {
   color: #333;
-  font-size: 38px;
+  font-size: 52px;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 0.02em;
-  margin-bottom: 60px;
-  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.coaches-subtitle {
+  color: #666;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 80px;
 }
 
 .trainers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto 80px;
-  align-items: center;
-  justify-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .trainer-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
+  background: #f8f9fa;
+  border-radius: 24px;
+  padding: 40px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .trainer-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
-.trainer-card img {
+.trainer-image-wrapper {
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 20px;
+  height: 300px;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.trainer-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer-info {
+  text-align: center;
 }
 
 .trainer-name {
   color: #333;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.trainer-title {
+  color: #769dbd;
+  font-size: 18px;
   font-weight: 600;
-  text-align: center;
+  margin: 0 0 20px 0;
 }
 
-/* Bottom Description */
-.cert-bottom-description {
-  background: linear-gradient(135deg, #769dbd 0%, #6b91b0 100%);
-  padding: 100px 60px;
-  text-align: center;
+.trainer-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
 }
 
-.bottom-desc-text {
-  color: white;
-  font-size: 24px;
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: white;
+  color: #666;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  max-width: 1000px;
-  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
 }
 
 /* Process Section */
 .cert-process {
   position: relative;
-  padding: 100px 60px;
-  background: #5a7e9c;
+  padding: 120px 60px;
+  background: linear-gradient(135deg, #769dbd 0%, #5a7e9c 100%);
 }
 
-.process-header {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 40px;
-}
-
-.process-line {
-  height: 12px;
-  background: white;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.process-line:nth-child(2) { opacity: 0.7; height: 10px; }
-.process-line:nth-child(3) { opacity: 0.5; height: 8px; }
-.process-line:nth-child(4) { opacity: 0.3; height: 6px; }
-.process-line:nth-child(5) { opacity: 0.15; height: 4px; }
-
-.process-title-bar {
-  background: white;
-  padding: 40px;
-  margin-bottom: 80px;
-  border-radius: 16px;
-}
-
-.process-title-bar h2 {
-  color: #333;
-  font-size: 48px;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0.02em;
-  margin: 0;
-}
-
-.process-main-title {
+.process-title {
   color: white;
-  font-size: 42px;
+  font-size: 52px;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 0.02em;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .process-subtitle {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 28px;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  font-weight: 400;
   text-align: center;
-  letter-spacing: 0.02em;
+  margin-bottom: 80px;
+}
+
+.process-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1600px;
+  margin: 0 auto 100px;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-8px);
+}
+
+.step-number {
+  color: #769dbd;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.step-content {
+  text-align: center;
+}
+
+.step-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.step-description {
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.6;
+  margin: 0;
+}
+
+.process-arrow {
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+.process-quote {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.quote-text {
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.quote-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
 }
 
 /* Footer */
 .cert-footer {
   background: #4a6d8c;
-  padding: 50px 40px 40px;
+  padding: 60px 40px 40px;
 }
 
 .footer-content {
@@ -342,19 +429,34 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .patents-boxes,
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps {
+    gap: 20px;
+  }
+
+  .process-arrow {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .cert-hero-title {
-    font-size: 56px;
+    font-size: 64px;
   }
 
   .cert-hero-subtitle {
-    font-size: 24px;
+    font-size: 26px;
   }
 
-  .patents-boxes,
-  .trainers-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .patents-section-title,
+  .coaches-section-title,
+  .process-title {
+    font-size: 42px;
   }
 
   .footer-content {
@@ -370,37 +472,58 @@
 
 @media (max-width: 768px) {
   .cert-hero {
-    padding: 100px 30px 60px;
-    min-height: 50vh;
+    padding: 120px 30px 80px;
+    min-height: 60vh;
   }
 
   .cert-hero-title {
-    font-size: 42px;
+    font-size: 48px;
   }
 
   .cert-hero-subtitle {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .cert-quote-section {
-    padding: 60px 30px;
+    padding: 80px 30px;
   }
 
   .cert-quote-text {
-    font-size: 24px;
+    font-size: 26px;
   }
 
-  .cert-patents-section {
-    padding: 60px 30px;
+  .cert-patents-section,
+  .cert-coaches-section,
+  .cert-process {
+    padding: 80px 30px;
   }
 
-  .patents-section-title {
+  .patents-section-title,
+  .coaches-section-title,
+  .process-title {
     font-size: 36px;
     margin-bottom: 50px;
   }
 
+  .coaches-subtitle,
+  .process-subtitle {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .patents-boxes,
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
   .patent-box {
-    padding: 40px 25px;
+    padding: 50px 30px;
+  }
+
+  .patent-icon-wrapper {
+    width: 100px;
+    height: 100px;
   }
 
   .patent-icon {
@@ -408,51 +531,54 @@
   }
 
   .patent-title {
-    font-size: 18px;
+    font-size: 20px;
+    min-height: auto;
   }
 
-  .trainers-title {
-    font-size: 28px;
-  }
-
-  .trainer-card img {
-    max-width: 250px;
+  .trainer-image-wrapper {
+    height: 250px;
   }
 
   .trainer-name {
+    font-size: 24px;
+  }
+
+  .trainer-title {
+    font-size: 16px;
+  }
+
+  .process-steps {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .process-step {
+    max-width: 100%;
+  }
+
+  .step-number {
+    font-size: 40px;
+  }
+
+  .step-title {
     font-size: 20px;
   }
 
-  .cert-bottom-description {
-    padding: 60px 30px;
+  .step-description {
+    font-size: 15px;
   }
 
-  .bottom-desc-text {
-    font-size: 18px;
-  }
-
-  .cert-process {
-    padding: 60px 30px;
-  }
-
-  .process-title-bar h2 {
+  .quote-text {
     font-size: 32px;
   }
 
-  .process-main-title {
-    font-size: 28px;
-  }
-
-  .process-subtitle {
-    font-size: 20px;
+  .quote-subtitle {
+    font-size: 18px;
   }
 
   .cert-footer {
-    padding: 30px 20px 25px;
-  }
-
-  .footer-content {
-    gap: 25px;
+    padding: 40px 20px 30px;
   }
 
   .footer-links {
