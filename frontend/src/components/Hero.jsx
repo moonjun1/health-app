@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -49,7 +51,7 @@ const Hero = () => {
         {slides[currentSlide].description && (
           <p className="hero-description">{slides[currentSlide].description}</p>
         )}
-        <button className="hero-button">
+        <button className="hero-button" onClick={() => navigate('/ai-matching')}>
           <span>찾으러 가기</span>
           <svg
             className="arrow-icon"
