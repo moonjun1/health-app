@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  top: 26px;
+  top: 36px;
   left: 24px;
   right: 24px;
   height: var(--header-height);
