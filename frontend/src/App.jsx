@@ -15,6 +15,7 @@ import AIMatchingPage from './pages/AIMatchingPage';
 import AIRecommendationResultPage from './pages/AIRecommendationResultPage';
 import RecruitPage from './pages/RecruitPage';
 import ApplicationPage from './pages/ApplicationPage';
+import CoachDetailPage from './pages/CoachDetailPage';
 import AboutPage from './pages/AboutPage';
 import IntroPage from './pages/IntroPage';
 import './App.css';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/ai-recommendation-result" element={<AIRecommendationResultPage />} />
           <Route path="/recruit" element={<RecruitPage />} />
           <Route path="/application" element={<ApplicationPage />} />
+          <Route path="/coach-detail/:coachId" element={<CoachDetailPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/intro" element={<IntroPage />} />
         </Routes>

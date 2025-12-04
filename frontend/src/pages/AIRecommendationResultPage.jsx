@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import './AIRecommendationResultPage.css';
 
 const AIRecommendationResultPage = () => {
+  const navigate = useNavigate();
+
+  const handleCoachClick = (coachId) => {
+    navigate(`/coach-detail/${coachId}`);
+  };
+
   return (
     <div className="ai-result-page">
       <Header />
@@ -21,7 +28,7 @@ const AIRecommendationResultPage = () => {
       {/* Trainers Container */}
       <div className="trainers-container">
         {/* Trainer 1 - 박성곤 */}
-        <div className="trainer-card">
+        <div className="trainer-card" onClick={() => handleCoachClick('park-sungkon')}>
           <img src="/trainer1.png" alt="박성곤 선생님" className="trainer-image" />
           <h3 className="trainer-name">박성곤 선생님</h3>
           <div className="category-badge health">헬스</div>
@@ -29,7 +36,7 @@ const AIRecommendationResultPage = () => {
         </div>
 
         {/* Trainer 2 - 송지연 */}
-        <div className="trainer-card">
+        <div className="trainer-card" onClick={() => handleCoachClick('song-jiyeon')}>
           <img src="/trainer2.png" alt="송지연 선생님" className="trainer-image" />
           <h3 className="trainer-name">송지연 선생님</h3>
           <div className="category-badge pilates">필라테스</div>
@@ -37,7 +44,7 @@ const AIRecommendationResultPage = () => {
         </div>
 
         {/* Trainer 3 - 김예나 */}
-        <div className="trainer-card">
+        <div className="trainer-card" onClick={() => handleCoachClick('kim-yena')}>
           <img src="/trainer3.png" alt="김예나 선생님" className="trainer-image" />
           <h3 className="trainer-name">김예나 선생님</h3>
           <div className="category-badge health">헬스</div>
