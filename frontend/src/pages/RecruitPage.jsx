@@ -13,7 +13,18 @@ const RecruitPage = () => {
         <div className="recruit-content">
           <h2 className="recruit-subtitle">지금이 적임입니다</h2>
           <h1 className="recruit-title">지금 코치로 등록하세요</h1>
-          <button className="recruit-button" onClick={() => navigate('/application')}>지원하기</button>
+          <p className="recruit-description">
+            은퇴 선수 경력을 인증하고 전문 코치로 활동하세요<br/>
+            <strong>대한체육회 선수등록정보</strong>로 자동 경력 검증
+          </p>
+          <div className="recruit-buttons">
+            <button className="recruit-button primary" onClick={() => navigate('/coach-register')}>
+              코치 등록하기
+            </button>
+            <button className="recruit-button secondary" onClick={() => navigate('/application')}>
+              일반 지원하기
+            </button>
+          </div>
         </div>
 
         <div className="recruit-image-container">

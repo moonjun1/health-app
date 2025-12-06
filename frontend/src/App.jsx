@@ -18,6 +18,7 @@ import ApplicationPage from './pages/ApplicationPage';
 import CoachDetailPage from './pages/CoachDetailPage';
 import AboutPage from './pages/AboutPage';
 import IntroPage from './pages/IntroPage';
+import CoachRegisterPage from './pages/CoachRegisterPage';
 import './App.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/coach-detail/:coachId" element={<CoachDetailPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/intro" element={<IntroPage />} />
+          <Route path="/coach-register" element={<CoachRegisterPage />} />
         </Routes>
       </div>
     </Router>

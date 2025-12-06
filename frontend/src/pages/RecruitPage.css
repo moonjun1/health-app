@@ -34,22 +34,58 @@
   color: var(--color-text-white);
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
+}
+
+.recruit-description {
+  color: var(--color-text-white);
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.recruit-description strong {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.recruit-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .recruit-button {
   padding: 16px 48px;
   border: 2px solid var(--color-text-white);
   border-radius: 8px;
-  background: transparent;
-  color: var(--color-text-white);
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition-default);
 }
 
-.recruit-button:hover {
+.recruit-button.primary {
+  background: var(--color-text-white);
+  color: #769dbd;
+  border-color: var(--color-text-white);
+}
+
+.recruit-button.primary:hover {
+  background: transparent;
+  color: var(--color-text-white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.recruit-button.secondary {
+  background: transparent;
+  color: var(--color-text-white);
+  border-color: var(--color-text-white);
+}
+
+.recruit-button.secondary:hover {
   background: var(--color-text-white);
   color: #769dbd;
   transform: translateY(-2px);
