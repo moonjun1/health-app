@@ -67,36 +67,46 @@ const MapPage = () => {
   useEffect(() => {
     // 카카오 맵 스크립트 로드
     const script = document.createElement('script');
-    script.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=bb4869a930660b479073d3a882c46c2c&autoload=false';
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=bb4869a930660b479073d3a882c46c2c&autoload=false';
     script.async = true;
     document.head.appendChild(script);
 
     script.onload = () => {
-      window.kakao.maps.load(() => {
-        const container = document.getElementById('map');
-        const options = {
-          center: new window.kakao.maps.LatLng(37.5019, 127.0411),
-          level: 5
-        };
+      console.log('Kakao script loaded');
+      if (window.kakao && window.kakao.maps) {
+        window.kakao.maps.load(() => {
+          console.log('Kakao maps loaded');
+          const container = document.getElementById('map');
+          const options = {
+            center: new window.kakao.maps.LatLng(37.5019, 127.0411),
+            level: 5
+          };
 
-        const kakaoMap = new window.kakao.maps.Map(container, options);
-        setMap(kakaoMap);
+          const kakaoMap = new window.kakao.maps.Map(container, options);
+          setMap(kakaoMap);
 
-        // 마커 추가
-        gyms.forEach(gym => {
-          const markerPosition = new window.kakao.maps.LatLng(gym.lat, gym.lng);
-          const marker = new window.kakao.maps.Marker({
-            position: markerPosition,
-            map: kakaoMap
-          });
+          // 마커 추가
+          gyms.forEach(gym => {
+            const markerPosition = new window.kakao.maps.LatLng(gym.lat, gym.lng);
+            const marker = new window.kakao.maps.Marker({
+              position: markerPosition,
+              map: kakaoMap
+            });
 
-          // 마커 클릭 이벤트
-          window.kakao.maps.event.addListener(marker, 'click', () => {
-            setSelectedGym(gym);
-            kakaoMap.setCenter(markerPosition);
+            // 마커 클릭 이벤트
+            window.kakao.maps.event.addListener(marker, 'click', () => {
+              setSelectedGym(gym);
+              kakaoMap.setCenter(markerPosition);
+            });
           });
         });
-      });
+      } else {
+        console.error('Kakao maps API not available');
+      }
+    };
+
+    script.onerror = (error) => {
+      console.error('Failed to load Kakao script:', error);
     };
 
     return () => {
